@@ -1341,3 +1341,236 @@ Processing by RoutesController#index as HTML
 Completed 200 OK in 47ms (Views: 45.9ms | ActiveRecord: 0.2ms)
 
 
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to AddRailwayStationIdToTrains (20161130153802)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (1.9ms)[0m  [1m[35mALTER TABLE "trains" ADD "railway_stations_id" integer[0m
+  [1m[35m (0.1ms)[0m  [1m[34mselect sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE  INDEX "index_trains_on_railway_stations_id" ON "trains" ("railway_stations_id")[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20161130153802"]]
+  [1m[35m (10.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", :environment], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_trains_on_railway_stations_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_trains_on_railway_stations_id' AND type='index'
+[0m
+  [1m[36mRailwayStation Load (0.2ms)[0m  [1m[34mSELECT  "railway_stations".* FROM "railway_stations" ORDER BY "railway_stations"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mTrain Load (0.1ms)[0m  [1m[34mSELECT  "trains".* FROM "trains" ORDER BY "trains"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to AddRailwayStationIdToTrains (20161130153802)
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.3ms)[0m  [1m[35mCREATE TEMPORARY TABLE "atrains" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "number" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL, "railway_stations_id" integer)[0m
+  [1m[35m (0.1ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_trains_on_railway_stations_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_trains_on_railway_stations_id' AND type='index'
+[0m
+  [1m[35m (0.0ms)[0m  [1m[34mselect sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE  INDEX "tindex_atrains_on_railway_stations_id" ON "atrains" ("railway_stations_id")[0m
+  [1m[35m (0.1ms)[0m  [1m[32mINSERT INTO "atrains" ("id","number","created_at","updated_at","railway_stations_id")
+                     SELECT "id","number","created_at","updated_at","railway_stations_id" FROM "trains"[0m
+  [1m[35m (1.2ms)[0m  [1m[35mDROP TABLE "trains"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE TABLE "trains" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "number" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  [1m[35m (0.1ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='tindex_atrains_on_railway_stations_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='tindex_atrains_on_railway_stations_id' AND type='index'
+[0m
+  [1m[35m (0.1ms)[0m  [1m[32mINSERT INTO "trains" ("id","number","created_at","updated_at")
+                     SELECT "id","number","created_at","updated_at" FROM "atrains"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mDROP TABLE "atrains"[0m
+  [1m[35mSQL (2.8ms)[0m  [1m[31mDELETE FROM "schema_migrations" WHERE "schema_migrations"."version" = ?[0m  [["version", "20161130153802"]]
+  [1m[35m (8.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to AddRailwayStationIdToTrains (20161130153802)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (1.1ms)[0m  [1m[35mALTER TABLE "trains" ADD "railway_station_id" integer[0m
+  [1m[35m (0.1ms)[0m  [1m[34mselect sqlite_version(*)[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCREATE  INDEX "index_trains_on_railway_station_id" ON "trains" ("railway_station_id")[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20161130153802"]]
+  [1m[35m (15.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", :environment], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (9.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_trains_on_railway_station_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_trains_on_railway_station_id' AND type='index'
+[0m
+  [1m[36mRailwayStation Load (0.2ms)[0m  [1m[34mSELECT  "railway_stations".* FROM "railway_stations" ORDER BY "railway_stations"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (3.2ms)[0m  [1m[32mINSERT INTO "trains" ("number", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["number", "first"], ["created_at", 2016-11-30 15:45:01 UTC], ["updated_at", 2016-11-30 15:45:01 UTC]]
+  [1m[35m (5.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTrain Load (0.2ms)[0m  [1m[34mSELECT  "trains".* FROM "trains" ORDER BY "trains"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mTrain Load (0.1ms)[0m  [1m[34mSELECT  "trains".* FROM "trains" ORDER BY "trains"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mRailwayStation Load (0.1ms)[0m  [1m[34mSELECT  "railway_stations".* FROM "railway_stations" ORDER BY "railway_stations"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (4.4ms)[0m  [1m[33mUPDATE "trains" SET "updated_at" = ?, "railway_station_id" = ? WHERE "trains"."id" = ?[0m  [["updated_at", 2016-11-30 15:47:02 UTC], ["railway_station_id", 1], ["id", 1]]
+  [1m[35m (8.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTrain Load (0.2ms)[0m  [1m[34mSELECT "trains".* FROM "trains" WHERE "trains"."railway_station_id" = ?[0m  [["railway_station_id", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (1.4ms)[0m  [1m[32mINSERT INTO "trains" ("number", "created_at", "updated_at", "railway_station_id") VALUES (?, ?, ?, ?)[0m  [["number", "123"], ["created_at", 2016-11-30 15:50:48 UTC], ["updated_at", 2016-11-30 15:50:48 UTC], ["railway_station_id", 1]]
+  [1m[35m (23.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+DEPRECATION WARNING: Passing an argument to force an association to reload is now deprecated and will be removed in Rails 5.1. Please call `reload` on the result collection proxy instead. (called from irb_binding at (irb):16)
+  [1m[36mTrain Load (0.1ms)[0m  [1m[34mSELECT "trains".* FROM "trains" WHERE "trains"."railway_station_id" = ?[0m  [["railway_station_id", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (1.3ms)[0m  [1m[32mINSERT INTO "trains" ("number", "created_at", "updated_at", "railway_station_id") VALUES (?, ?, ?, ?)[0m  [["number", "777"], ["created_at", 2016-11-30 15:53:39 UTC], ["updated_at", 2016-11-30 15:53:39 UTC], ["railway_station_id", 1]]
+  [1m[35m (5.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.0ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to AddRailwayStationIdToTrains (20161130153802)
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.3ms)[0m  [1m[35mCREATE TEMPORARY TABLE "atrains" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "number" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL, "railway_station_id" integer)[0m
+  [1m[35m (0.1ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_trains_on_railway_station_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_trains_on_railway_station_id' AND type='index'
+[0m
+  [1m[35m (0.0ms)[0m  [1m[34mselect sqlite_version(*)[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCREATE  INDEX "tindex_atrains_on_railway_station_id" ON "atrains" ("railway_station_id")[0m
+  [1m[35m (0.1ms)[0m  [1m[32mINSERT INTO "atrains" ("id","number","created_at","updated_at","railway_station_id")
+                     SELECT "id","number","created_at","updated_at","railway_station_id" FROM "trains"[0m
+  [1m[35m (1.9ms)[0m  [1m[35mDROP TABLE "trains"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE TABLE "trains" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "number" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  [1m[35m (0.1ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='tindex_atrains_on_railway_station_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='tindex_atrains_on_railway_station_id' AND type='index'
+[0m
+  [1m[35m (0.1ms)[0m  [1m[32mINSERT INTO "trains" ("id","number","created_at","updated_at")
+                     SELECT "id","number","created_at","updated_at" FROM "atrains"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mDROP TABLE "atrains"[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[31mDELETE FROM "schema_migrations" WHERE "schema_migrations"."version" = ?[0m  [["version", "20161130153802"]]
+  [1m[35m (8.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to AddRailwayStationIdToTrains (20161130153802)
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (1.8ms)[0m  [1m[35mALTER TABLE "trains" ADD "current_station_id" integer[0m
+  [1m[35m (0.1ms)[0m  [1m[34mselect sqlite_version(*)[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCREATE  INDEX "index_trains_on_current_station_id" ON "trains" ("current_station_id")[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20161130153802"]]
+  [1m[35m (11.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", :environment], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_trains_on_current_station_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_trains_on_current_station_id' AND type='index'
+[0m
+  [1m[36mTrain Load (0.3ms)[0m  [1m[34mSELECT  "trains".* FROM "trains" ORDER BY "trains"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mRailwayStation Load (0.2ms)[0m  [1m[34mSELECT  "railway_stations".* FROM "railway_stations" ORDER BY "railway_stations"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mTrain Load (0.2ms)[0m  [1m[34mSELECT  "trains".* FROM "trains" ORDER BY "trains"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mRailwayStation Load (0.1ms)[0m  [1m[34mSELECT  "railway_stations".* FROM "railway_stations" ORDER BY "railway_stations"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (3.3ms)[0m  [1m[33mUPDATE "trains" SET "updated_at" = ?, "current_station_id" = ? WHERE "trains"."id" = ?[0m  [["updated_at", 2016-11-30 16:00:16 UTC], ["current_station_id", 1], ["id", 1]]
+  [1m[35m (5.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to CreateStationsRoutes (20161130160301)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (1.8ms)[0m  [1m[35mCREATE TABLE "stations_routes" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "station_id" integer, "route_id" integer)[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20161130160301"]]
+  [1m[35m (19.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", :environment], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_trains_on_current_station_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_trains_on_current_station_id' AND type='index'
+[0m
+  [1m[36mRailwayStation Load (0.2ms)[0m  [1m[34mSELECT  "railway_stations".* FROM "railway_stations" ORDER BY "railway_stations"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (3.0ms)[0m  [1m[32mINSERT INTO "routes" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "test"], ["created_at", 2016-11-30 16:05:24 UTC], ["updated_at", 2016-11-30 16:05:24 UTC]]
+  [1m[35m (16.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to CreateStationsRoutes (20161130160301)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (2.1ms)[0m  [1m[35mDROP TABLE "stations_routes"[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[31mDELETE FROM "schema_migrations" WHERE "schema_migrations"."version" = ?[0m  [["version", "20161130160301"]]
+  [1m[35m (12.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_trains_on_current_station_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_trains_on_current_station_id' AND type='index'
+[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to CreateStationsRoutes (20161130160301)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (1.8ms)[0m  [1m[35mCREATE TABLE "railway_stations_routes" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "railway_station_id" integer, "route_id" integer)[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20161130160301"]]
+  [1m[35m (35.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", :environment], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_trains_on_current_station_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_trains_on_current_station_id' AND type='index'
+[0m
+  [1m[36mRailwayStation Load (0.1ms)[0m  [1m[34mSELECT  "railway_stations".* FROM "railway_stations" ORDER BY "railway_stations"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mRoute Load (0.1ms)[0m  [1m[34mSELECT  "routes".* FROM "routes" ORDER BY "routes"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mRailwayStation Load (0.2ms)[0m  [1m[34mSELECT  "railway_stations".* FROM "railway_stations" ORDER BY "railway_stations"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mRoute Load (0.1ms)[0m  [1m[34mSELECT  "routes".* FROM "routes" ORDER BY "routes"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mRoute Load (0.2ms)[0m  [1m[34mSELECT "routes".* FROM "routes" INNER JOIN "railway_stations_routes" ON "routes"."id" = "railway_stations_routes"."route_id" WHERE "railway_stations_routes"."railway_station_id" = ?[0m  [["railway_station_id", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (1.2ms)[0m  [1m[32mINSERT INTO "railway_stations_routes" ("railway_station_id", "route_id") VALUES (?, ?)[0m  [["railway_station_id", 1], ["route_id", 2]]
+  [1m[35m (14.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mRailwayStation Load (0.2ms)[0m  [1m[34mSELECT "railway_stations".* FROM "railway_stations" INNER JOIN "railway_stations_routes" ON "railway_stations"."id" = "railway_stations_routes"."railway_station_id" WHERE "railway_stations_routes"."route_id" = ?[0m  [["route_id", 2]]
+  [1m[36mRailwayStation Load (0.2ms)[0m  [1m[34mSELECT  "railway_stations".* FROM "railway_stations" ORDER BY "railway_stations"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mRoute Load (0.1ms)[0m  [1m[34mSELECT  "routes".* FROM "routes" ORDER BY "routes"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mRoute Load (0.1ms)[0m  [1m[34mSELECT  "routes".* FROM "routes" ORDER BY "routes"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mRailwayStation Load (0.2ms)[0m  [1m[34mSELECT  "railway_stations".* FROM "railway_stations" ORDER BY "railway_stations"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mRailwayStation Load (0.2ms)[0m  [1m[34mSELECT  "railway_stations".* FROM "railway_stations" ORDER BY "railway_stations"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mRoute Load (0.1ms)[0m  [1m[34mSELECT  "routes".* FROM "routes" ORDER BY "routes"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mRoute Load (0.2ms)[0m  [1m[34mSELECT "routes".* FROM "routes" INNER JOIN "railway_stations_routes" ON "routes"."id" = "railway_stations_routes"."route_id" WHERE "railway_stations_routes"."railway_station_id" = ?[0m  [["railway_station_id", 1]]
+  [1m[36mRailwayStation Load (0.2ms)[0m  [1m[34mSELECT "railway_stations".* FROM "railway_stations" INNER JOIN "railway_stations_routes" ON "railway_stations"."id" = "railway_stations_routes"."railway_station_id" WHERE "railway_stations_routes"."route_id" = ?[0m  [["route_id", 2]]
