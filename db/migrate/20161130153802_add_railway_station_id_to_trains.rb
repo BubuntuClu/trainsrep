@@ -4,3 +4,4 @@ class AddRailwayStationIdToTrains < ActiveRecord::Migration[5.0]
     add_belongs_to :trains, :current_station
   end
 end
+
