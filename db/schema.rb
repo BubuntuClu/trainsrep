@@ -31,14 +31,14 @@ ActiveRecord::Schema.define(version: 20161130172219) do
 
   create_table "tickets", force: :cascade do |t|
     t.integer  "number"
-    t.datetime "created_at",         null: false
-    t.datetime "updated_at",         null: false
+    t.datetime "created_at",       null: false
+    t.datetime "updated_at",       null: false
     t.integer  "user_id"
     t.integer  "train_id"
-    t.integer  "current_station_id"
+    t.integer  "start_station_id"
     t.integer  "end_station_id"
-    t.index ["current_station_id"], name: "index_tickets_on_current_station_id"
     t.index ["end_station_id"], name: "index_tickets_on_end_station_id"
+    t.index ["start_station_id"], name: "index_tickets_on_start_station_id"
     t.index ["train_id"], name: "index_tickets_on_train_id"
     t.index ["user_id"], name: "index_tickets_on_user_id"
   end
