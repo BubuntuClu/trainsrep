@@ -5,5 +5,36 @@
   <%= @route.name %>
 </p>
 
+<p>
+  <strong>Stations in route:</strong>
+</p>
+
+<p>
+  <% if @route.railway_stations.empty? %>
+    No stations in route
+  <% else %>
+    <ul>
+      <% @route.railway_stations.each do |station| %>
+        <li> <%= station.title %> </li>
+      <% end %>
+    </ul>
+  <% end %>
+</p>
+
+<p>
+  <strong>Trains on that route:</strong>
+</p>
+<p>
+  <% if @route.trains.empty? %>
+    No trains on that route
+  <% else %>
+    <ul>
+      <% @route.trains.each do |station| %>
+        <li> <%= station.number %> </li>
+      <% end %>
+    </ul>
+  <% end %>
+</p>
+
 <%= link_to 'Edit', edit_route_path(@route) %> |
 <%= link_to 'Back', routes_path %>
