@@ -29,8 +29,8 @@
     No trains on that route
   <% else %>
     <ul>
-      <% @route.trains.each do |station| %>
-        <li> <%= station.number %> </li>
+      <% @route.trains.each do |train| %>
+        <li> <%= train.number %> </li>
       <% end %>
     </ul>
   <% end %>
