@@ -4,6 +4,5 @@ class Train < ApplicationRecord
   has_many :tickets
   has_many :cars
 
-
   validates :number, presence: true
 end
