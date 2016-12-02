@@ -21,5 +21,31 @@
   <% end %>
 </p>
 
+
+<p>
+  <strong>Info about cars:</strong>
+  <% if @train.cars.present? %>
+    <p>
+      <strong>Count of plazkart cars:</strong>
+        <%= @train.cars.map(&:car_type).count("plazkart") %>
+    </p>
+    <p>
+      <strong>Count of coupe cars:</strong>
+        <%= @train.cars.map(&:car_type).count("coupe") %>
+    </p>
+    <p>
+      <strong>Total upper space:</strong>
+        <%= @train.cars.map(&:up_space).reduce(:+) %>
+    <p>
+      <strong>Total lower space:</strong>
+        <%= @train.cars.map(&:low_space).reduce(:+) %>
+    </p>
+  <% else %>
+    Train hasnt got any cars
+  <% end %>
+</p>
+
+
+
 <%= link_to 'Edit', edit_train_path(@train) %> |
 <%= link_to 'Back', trains_path %>
