@@ -1,0 +1,17 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Type:</strong>
+  <%= @car.car_type %>
+</p>
+<p>
+  <strong>Up space count:</strong>
+    <%= @car.up_space %>
+</p>
+<p>
+  <strong>Low space count:</strong>
+    <%= @car.low_space %>
+</p>
+
+<%= link_to 'Edit', edit_car_path(@car) %> |
+<%= link_to 'Back', cars_path %>
