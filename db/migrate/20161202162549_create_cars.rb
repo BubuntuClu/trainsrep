@@ -4,7 +4,7 @@ class CreateCars < ActiveRecord::Migration[5.0]
       t.string :car_type
       t.integer :up_space
       t.integer :low_space
-      
+
       t.timestamps
     end
   end

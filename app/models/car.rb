@@ -1,11 +1,11 @@
 class Car < ApplicationRecord
   belongs_to :train
 
-  validates :car_type, :number, presence: true 
+  validates :car_type, :number, presence: true
   validate :number_exist
 
   scope :asc, -> { order(:number) }
-  scope :desc, -> { order("number DESC") }
+  scope :desc, -> { order('number DESC') }
   scope :plazkart, -> { where(car_type: 'PlazkartCar') }
   scope :coupe, -> { where(car_type: 'CoupeCar') }
   scope :SV, -> { where(car_type: 'SVCar') }

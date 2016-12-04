@@ -5,7 +5,7 @@ class CarsController < ApplicationController
     @cars = Car.all
   end
 
-  def show  
+  def show
     render "#{@car.car_type}_car.html.erb"
   end
 
@@ -19,17 +19,17 @@ class CarsController < ApplicationController
   def create
     @car = Car.new(car_params)
     if @car.save
-      redirect_to @car, notice: 'Car was successfully created.' 
+      redirect_to @car, notice: 'Car was successfully created.'
     else
-      render :new 
+      render :new
     end
   end
 
   def update
     if @car.update(car_params)
-      redirect_to @car, notice: 'Car was successfully updated.' 
+      redirect_to @car, notice: 'Car was successfully updated.'
     else
-      render :edit 
+      render :edit
     end
   end
 
