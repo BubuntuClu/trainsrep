@@ -5,7 +5,8 @@ class CarsController < ApplicationController
     @cars = Car.all
   end
 
-  def show
+  def show  
+    render "#{@car.car_type}_car.html.erb"
   end
 
   def new
@@ -43,6 +44,6 @@ class CarsController < ApplicationController
     end
 
     def car_params
-      params.require(:car).permit(:number, :car_type, :up_space, :low_space, :train_id)
+      params.require(:car).permit(:number, :car_type, :up_space, :low_space, :train_id, :side_up_space, :side_low_space, :seat_space)
     end
 end

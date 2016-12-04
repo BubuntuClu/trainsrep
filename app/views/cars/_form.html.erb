@@ -4,12 +4,7 @@
 
   <div class="field">
     <%= f.label :car_type, "Car's type" %>
-    <%= f.select :car_type, ["plazkart","coupe"] %>
-  </div>
-
-  <div class="field">
-    <%= f.label :number, "Car's number" %>
-    <%= f.text_field :number %>
+    <%= f.select :car_type, ["seat", "sv", "plazkart","coupe"] %>
   </div>
 
   <div class="field">
@@ -23,6 +18,21 @@
   </div>
 
     <div class="field">
+    <%= f.label :side_up_space %>
+    <%= f.text_field :side_up_space %>
+  </div>
+
+  <div class="field">
+    <%= f.label :side_low_space %>
+    <%= f.text_field :side_low_space %>
+  </div>
+
+  <div class="field">
+    <%= f.label :seat_space %>
+    <%= f.text_field :seat_space %>
+  </div>
+
+  <div class="field">
     <%= f.label :train, "Train, where u add this car" %>
     <%= f.collection_select :train_id, Train.all, :id, :number %>
   </div>

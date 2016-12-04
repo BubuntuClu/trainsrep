@@ -5,4 +5,12 @@ class Train < ApplicationRecord
   has_many :cars
 
   validates :number, presence: true
+
+  private
+
+  # where shoul we use it in our app?
+  # in view?
+  def count_type_place(type, space_type)
+    count = Car.where(car_type: "#{type}").sum(:space_type)
+  end
 end
