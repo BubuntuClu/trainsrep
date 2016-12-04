@@ -1,0 +1,2 @@
+class CoupeCar < Car
+end

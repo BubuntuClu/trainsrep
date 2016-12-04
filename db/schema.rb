@@ -10,15 +10,18 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20161202162907) do
+ActiveRecord::Schema.define(version: 20161204123344) do
 
   create_table "cars", force: :cascade do |t|
     t.string   "car_type"
     t.integer  "up_space"
     t.integer  "low_space"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.datetime "created_at",     null: false
+    t.datetime "updated_at",     null: false
     t.integer  "train_id"
+    t.integer  "number"
+    t.integer  "side_up_space"
+    t.integer  "side_low_space"
     t.index ["train_id"], name: "index_cars_on_train_id"
   end
 
@@ -31,6 +34,7 @@ ActiveRecord::Schema.define(version: 20161202162907) do
   create_table "railway_stations_routes", force: :cascade do |t|
     t.integer "railway_station_id"
     t.integer "route_id"
+    t.integer "station_order"
   end
 
   create_table "routes", force: :cascade do |t|

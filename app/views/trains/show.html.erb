@@ -26,6 +26,12 @@
   <strong>Info about cars:</strong>
   <% if @train.cars.present? %>
     <p>
+      <strong>List of cars cars:</strong>
+      <% @train.cars.each do |car| %>
+        <%= link_to "#{car.number}", car %>
+      <% end %>
+    </p>
+    <p>
       <strong>Count of plazkart cars:</strong>
         <%= @train.cars.map(&:car_type).count("plazkart") %>
     </p>
