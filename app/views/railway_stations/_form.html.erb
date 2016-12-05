@@ -5,6 +5,16 @@
     <%= f.text_field :title %>
   </div>
 
+  <div class="field">
+    <%= f.label :arrival %>
+    <%= date_field("f","arrival") %>
+  </div>
+
+  <div class="field">
+    <%= f.label :departure %>
+    <%= f.datetime_local_field :departure %>
+  </div>
+
   <div class="actions">
     <%= f.submit %>
   </div>

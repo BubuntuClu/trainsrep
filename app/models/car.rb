@@ -17,7 +17,7 @@ class Car < ApplicationRecord
 
   def set_number
     numb = Car.where(train_id: train).maximum(:number)
-    self.number = numb == nil ? 1 : numb + 1
+    self.number = numb ? numb + 1 : 1
   end
 
   def number_exist
