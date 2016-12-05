@@ -3,6 +3,7 @@
 <p>
   <strong>Number:</strong>
   <%= @train.number %>
+  </br>
 </p>
 <p>
   <strong>On station:</strong>
@@ -21,24 +22,19 @@
   <% end %>
 </p>
 
-
 <p>
-  <strong>Info about cars:</strong>
   <% if @train.cars.present? %>
     <p>
-      <strong>Count of plazkart cars:</strong>
-        <%= @train.cars.map(&:car_type).count("plazkart") %>
-    </p>
-    <p>
-      <strong>Count of coupe cars:</strong>
-        <%= @train.cars.map(&:car_type).count("coupe") %>
-    </p>
-    <p>
-      <strong>Total upper space:</strong>
-        <%= @train.cars.map(&:up_space).reduce(:+) %>
-    <p>
-      <strong>Total lower space:</strong>
-        <%= @train.cars.map(&:low_space).reduce(:+) %>
+      <strong>List of cars cars:</strong>
+      <% if @train.ordering %>
+        <% @train.cars.asc.each do |car| %>
+          <%= link_to "#{car.number}", car %>
+        <% end %>
+      <% else %>
+        <% @train.cars.desc.each do |car| %>
+          <%= link_to "#{car.number}", car %>
+        <% end %>
+      <% end %>
     </p>
   <% else %>
     Train hasnt got any cars

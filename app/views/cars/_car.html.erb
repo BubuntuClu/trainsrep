@@ -1,5 +1,5 @@
 <tr>
-  <td><%= car.train.number %>: <%= car.car_type %>, <%= car.up_space  %>, <%= car.low_space %></td>
+  <td>Train - <%= car.train.number %>. Car number - <%= car.number %></td>
   <td><%= link_to 'Show', car %></td>
   <td><%= link_to 'Edit', edit_car_path(car) %></td>
   <td><%= link_to 'Destroy', car, method: :delete, data: { confirm: 'Are you sure?' } %></td>

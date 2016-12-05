@@ -18,17 +18,17 @@ class TrainsController < ApplicationController
   def create
     @train = Train.new(train_params)
     if @train.save
-      redirect_to @train, notice: 'Train was successfully created.' 
+      redirect_to @train, notice: 'Train was successfully created.'
     else
-      render :new 
+      render :new
     end
   end
 
   def update
     if @train.update(train_params)
-      redirect_to @train, notice: 'Train was successfully updated.' 
+      redirect_to @train, notice: 'Train was successfully updated.'
     else
-      render :edit 
+      render :edit
     end
   end
 

@@ -6,6 +6,7 @@ class CarsController < ApplicationController
   end
 
   def show
+    render "#{@car.car_type}_car.html.erb"
   end
 
   def new
@@ -18,17 +19,17 @@ class CarsController < ApplicationController
   def create
     @car = Car.new(car_params)
     if @car.save
-      redirect_to @car, notice: 'Car was successfully created.' 
+      redirect_to @car, notice: 'Car was successfully created.'
     else
-      render :new 
+      render :new
     end
   end
 
   def update
     if @car.update(car_params)
-      redirect_to @car, notice: 'Car was successfully updated.' 
+      redirect_to @car, notice: 'Car was successfully updated.'
     else
-      render :edit 
+      render :edit
     end
   end
 
@@ -43,6 +44,6 @@ class CarsController < ApplicationController
     end
 
     def car_params
-      params.require(:car).permit(:car_type, :up_space, :low_space, :train_id)
+      params.require(:car).permit(:number, :car_type, :up_space, :low_space, :train_id, :side_up_space, :side_low_space, :seat_space)
     end
 end

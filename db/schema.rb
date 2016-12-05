@@ -10,63 +10,69 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20161202162907) do
+ActiveRecord::Schema.define(version: 20161204143159) do
 
-  create_table "cars", force: :cascade do |t|
-    t.string   "car_type"
-    t.integer  "up_space"
-    t.integer  "low_space"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.integer  "train_id"
-    t.index ["train_id"], name: "index_cars_on_train_id"
+  create_table 'cars', force: :cascade do |t|
+    t.string   'car_type'
+    t.integer  'up_space'
+    t.integer  'low_space'
+    t.datetime 'created_at',     null: false
+    t.datetime 'updated_at',     null: false
+    t.integer  'train_id'
+    t.integer  'number'
+    t.integer  'side_up_space'
+    t.integer  'side_low_space'
+    t.integer  'seat_space'
+    t.index ['train_id'], name: 'index_cars_on_train_id'
   end
 
-  create_table "railway_stations", force: :cascade do |t|
-    t.string   "title"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+  create_table 'railway_stations', force: :cascade do |t|
+    t.string   'title'
+    t.datetime 'created_at', null: false
+    t.datetime 'updated_at', null: false
   end
 
-  create_table "railway_stations_routes", force: :cascade do |t|
-    t.integer "railway_station_id"
-    t.integer "route_id"
+  create_table 'railway_stations_routes', force: :cascade do |t|
+    t.integer 'railway_station_id'
+    t.integer 'route_id'
+    t.integer 'station_order'
   end
 
-  create_table "routes", force: :cascade do |t|
-    t.string   "name"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+  create_table 'routes', force: :cascade do |t|
+    t.string   'name'
+    t.datetime 'created_at', null: false
+    t.datetime 'updated_at', null: false
   end
 
-  create_table "tickets", force: :cascade do |t|
-    t.integer  "number"
-    t.datetime "created_at",       null: false
-    t.datetime "updated_at",       null: false
-    t.integer  "user_id"
-    t.integer  "train_id"
-    t.integer  "start_station_id"
-    t.integer  "end_station_id"
-    t.index ["end_station_id"], name: "index_tickets_on_end_station_id"
-    t.index ["start_station_id"], name: "index_tickets_on_start_station_id"
-    t.index ["train_id"], name: "index_tickets_on_train_id"
-    t.index ["user_id"], name: "index_tickets_on_user_id"
+  create_table 'tickets', force: :cascade do |t|
+    t.integer  'number'
+    t.datetime 'created_at',       null: false
+    t.datetime 'updated_at',       null: false
+    t.integer  'user_id'
+    t.integer  'train_id'
+    t.integer  'start_station_id'
+    t.integer  'end_station_id'
+    t.index ['end_station_id'], name: 'index_tickets_on_end_station_id'
+    t.index ['start_station_id'], name: 'index_tickets_on_start_station_id'
+    t.index ['train_id'], name: 'index_tickets_on_train_id'
+    t.index ['user_id'], name: 'index_tickets_on_user_id'
   end
 
-  create_table "trains", force: :cascade do |t|
-    t.string   "number"
-    t.datetime "created_at",         null: false
-    t.datetime "updated_at",         null: false
-    t.integer  "current_station_id"
-    t.integer  "route_id"
-    t.index ["current_station_id"], name: "index_trains_on_current_station_id"
-    t.index ["route_id"], name: "index_trains_on_route_id"
+  create_table 'trains', force: :cascade do |t|
+    t.string   'number'
+    t.datetime 'created_at',         null: false
+    t.datetime 'updated_at',         null: false
+    t.integer  'current_station_id'
+    t.integer  'route_id'
+    t.boolean  'ordering'
+    t.index ['current_station_id'], name: 'index_trains_on_current_station_id'
+    t.index ['route_id'], name: 'index_trains_on_route_id'
   end
 
-  create_table "users", force: :cascade do |t|
-    t.string   "name"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+  create_table 'users', force: :cascade do |t|
+    t.string   'name'
+    t.datetime 'created_at', null: false
+    t.datetime 'updated_at', null: false
   end
 
 end
