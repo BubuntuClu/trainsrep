@@ -2,13 +2,13 @@
 
 <%= form_for(@search, method: :post , url: search_path) do |f| %>
   <div class="field">
-    <%= f.label :start_station, "Start station" %>
-    <%= f.collection_select :start_station, RailwayStation.all, :id, :title %>
+    <%= f.label :start_station_id, "Start station" %>
+    <%= f.collection_select :start_station_id, RailwayStation.all, :id, :title %>
   </div>
 
    <div class="field">
-    <%= f.label :end_station, "End station" %>
-    <%= f.collection_select :end_station, RailwayStation.all, :id, :title %>
+    <%= f.label :end_station_id, "End station" %>
+    <%= f.collection_select :end_station_id, RailwayStation.all, :id, :title %>
   </div>
   <div class="actions">
     <%= f.submit 'Search' %>
@@ -30,9 +30,17 @@
         <tr>
           <td><%= res.number %></td>
           <td><%= res.route.name %></td>
-          <td><%= @search.start_station %></td>
-          <td><%= @search.end_station %></td>
-          <td>Buy ticket</td>
+          <td><%= @search.find_start_station.station_time(res.route, :departure) %></td>
+          <td><%= @search.find_end_station.station_time(res.route, :arrival) %></td>
+          <td><%= res.id %></td>
+          <td>
+            <%= form_tag new_ticket_path, method: :get do %>
+              <%= hidden_field_tag :train_id, res.id %>
+              <%= hidden_field_tag :start_station_id, @search.start_station_id %>
+              <%= hidden_field_tag :end_station_id, @search.end_station_id %>
+              <%= submit_tag "Buy ticket" %>
+            <% end %>
+          </td>
         </tr>
         <% end %>
       </tbody>

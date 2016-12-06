@@ -11,6 +11,8 @@ Rails.application.routes.draw do
   end
 
   resource :search, only: [:show, :create]
+  # resource :ticket, only: [:show, :create, :new]
+  resources :tickets
 
   get 'welcome/index'
   root 'welcome#index'

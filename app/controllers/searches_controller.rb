@@ -12,7 +12,7 @@ class SearchesController < ApplicationController
   protected
 
   def search_params
-    params.require(:search).permit(:start_station, :end_station)
+    params.require(:search).permit(:start_station_id, :end_station_id)
   end
 
 end
