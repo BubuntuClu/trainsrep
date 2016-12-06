@@ -7,11 +7,11 @@ Rails.application.routes.draw do
   
   resources :railway_stations do
     patch :update_station_order, on: :member
+    patch :update_time, on: :member
   end
 
-  resource :search, only: [:new, :show, :edit]
+  resource :search, only: [:show, :create]
 
   get 'welcome/index'
   root 'welcome#index'
-  # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end

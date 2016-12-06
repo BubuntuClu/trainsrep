@@ -30,14 +30,14 @@ ActiveRecord::Schema.define(version: 20161205173812) do
     t.string   "title"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.datetime "departure"
-    t.datetime "arrival"
   end
 
   create_table "railway_stations_routes", force: :cascade do |t|
-    t.integer "railway_station_id"
-    t.integer "route_id"
-    t.integer "station_order"
+    t.integer  "railway_station_id"
+    t.integer  "route_id"
+    t.integer  "station_order"
+    t.datetime "departure"
+    t.datetime "arrival"
   end
 
   create_table "routes", force: :cascade do |t|

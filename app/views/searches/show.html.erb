@@ -1,0 +1,41 @@
+<h1>SEARCH TICKET</h1>
+
+<%= form_for(@search, method: :post , url: search_path) do |f| %>
+  <div class="field">
+    <%= f.label :start_station, "Start station" %>
+    <%= f.collection_select :start_station, RailwayStation.all, :id, :title %>
+  </div>
+
+   <div class="field">
+    <%= f.label :end_station, "End station" %>
+    <%= f.collection_select :end_station, RailwayStation.all, :id, :title %>
+  </div>
+  <div class="actions">
+    <%= f.submit 'Search' %>
+  </div>
+
+
+  <% if @search.search_result %>
+    <table>
+      <thead>
+        <tr>
+          <td>Train</td>
+          <td>Route</td>
+          <td>Departure time</td>
+          <td>Arrival time</td>
+        </tr>
+      </thead>
+      <tbody>
+        <% @search.search_result.each do |res| %>
+        <tr>
+          <td><%= res.number %></td>
+          <td><%= res.route.name %></td>
+          <td><%= @search.start_station %></td>
+          <td><%= @search.end_station %></td>
+          <td>Buy ticket</td>
+        </tr>
+        <% end %>
+      </tbody>
+    </table>
+  <% end %>
+<% end %>
