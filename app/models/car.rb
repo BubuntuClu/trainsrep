@@ -2,7 +2,7 @@ class Car < ApplicationRecord
   belongs_to :train
 
   validates :car_type, :number, presence: true
-  validate :number_exist
+  validates :number, uniqueness: { scope: :train_id }
 
   scope :asc, -> { order(:number) }
   scope :desc, -> { order('number DESC') }
@@ -18,12 +18,6 @@ class Car < ApplicationRecord
   def set_number
     numb = Car.where(train_id: train).maximum(:number)
     self.number = numb ? numb + 1 : 1
-  end
-
-  def number_exist
-    if Car.where(train_id: train).where(number: number).count > 0
-      errors.add(:base, "New Train number - #{number}. Number should not be equals")
-    end
   end
 
 end
