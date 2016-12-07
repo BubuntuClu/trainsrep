@@ -3,7 +3,7 @@ Rails.application.routes.draw do
   
   resource :search, only: [:show, :create]
   # resource :ticket, only: [:show, :create, :new]
-  resources :tickets, only: [:new, :create, :show]
+  resources :tickets
 
   namespace :admin do
     resources :railway_stations do

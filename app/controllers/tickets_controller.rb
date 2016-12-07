@@ -2,6 +2,10 @@ class TicketsController < ApplicationController
   before_action :authenticate_user!, only: :create
   before_action :hidden_params, only: [:new]
 
+  def index
+    @tickets = current_user.tickets
+  end
+
   def show
     @ticket = Ticket.find(params[:id])
   end
@@ -17,6 +21,11 @@ class TicketsController < ApplicationController
 
   def new
     @ticket = Ticket.new(train_id: params[:train_id], start_station_id: params[:start_station_id], end_station_id: params[:end_station_id])
+  end
+
+  def destroy
+    current_user.tickets.find(params[:id]).destroy
+    redirect_to tickets_path, notice: 'Ticket was successfully destroyed.'
   end
 
   private
