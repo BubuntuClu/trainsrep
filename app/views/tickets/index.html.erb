@@ -9,13 +9,7 @@
   </thead>
 
   <tbody>
-    <% @tickets.each do |ticket| %>
-      <tr>
-        <td>Train number: <%= ticket.train.number %></td>
-        <td><%= link_to 'Show',  ticket %></td>
-        <td><%= link_to 'Destroy', ticket, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
-    <% end %>
+    <%= render @tickets %>
   </tbody>
 </table>
 

@@ -22232,3 +22232,1140 @@ Processing by TicketsController#index as HTML
 Completed 200 OK in 92ms (Views: 84.1ms | ActiveRecord: 2.1ms)
 
 
+Started GET "/tickets" for 127.0.0.1 at 2016-12-07 22:42:21 +0500
+Processing by TicketsController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  Rendering tickets/index.html.erb within layouts/application
+  [1m[36mTicket Load (0.2ms)[0m  [1m[34mSELECT "tickets".* FROM "tickets" WHERE "tickets"."user_id" = ?[0m  [["user_id", 5]]
+  Rendered tickets/index.html.erb within layouts/application (7.0ms)
+Completed 200 OK in 116ms (Views: 69.2ms | ActiveRecord: 1.4ms)
+
+
+Started DELETE "/users/sign_out" for 127.0.0.1 at 2016-12-07 22:42:23 +0500
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"jgsU7omYPw2iR8MdLTCtwPLHesF/4HQYNTyKE9yvBW62j/tVDmYFJemhdQk3joVxRlDJhFvf0Svg8Kt01QdXZA=="}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 24ms (ActiveRecord: 0.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2016-12-07 22:42:23 +0500
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 78ms (Views: 77.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2016-12-07 22:42:25 +0500
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (1.1ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (11.7ms)
+Completed 200 OK in 66ms (Views: 64.9ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/sign_in" for 127.0.0.1 at 2016-12-07 22:42:28 +0500
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"n/9KLdWqOXdd9sSevxa4Hzi5P/l1VFztuEnVov31OvMwMpI1K1R6BKKKTLQhhqIo5FgLPbD0lduVDG2IVJq7Nw==", "user"=>{"email"=>"admin@admin.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["email", "admin@admin.com"], ["LIMIT", 1]]
+Redirected to http://localhost:3000/
+Completed 302 Found in 318ms (ActiveRecord: 0.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2016-12-07 22:42:28 +0500
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (0.6ms)
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+Completed 200 OK in 107ms (Views: 105.7ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/tickets" for 127.0.0.1 at 2016-12-07 22:42:36 +0500
+Processing by TicketsController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering tickets/index.html.erb within layouts/application
+  [1m[36mTicket Load (0.2ms)[0m  [1m[34mSELECT "tickets".* FROM "tickets"[0m
+  [1m[36mTrain Load (0.1ms)[0m  [1m[34mSELECT  "trains".* FROM "trains" WHERE "trains"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mTrain Load (0.1ms)[0m  [1m[34mSELECT  "trains".* FROM "trains" WHERE "trains"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  Rendered tickets/index.html.erb within layouts/application (55.9ms)
+Completed 200 OK in 131ms (Views: 127.5ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/tickets" for 127.0.0.1 at 2016-12-07 22:43:22 +0500
+Processing by TicketsController#index as HTML
+  [1m[36mUser Load (3.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering tickets/index.html.erb within layouts/application
+  [1m[36mTicket Load (2.2ms)[0m  [1m[34mSELECT "tickets".* FROM "tickets"[0m
+  [1m[36mTrain Load (0.1ms)[0m  [1m[34mSELECT  "trains".* FROM "trains" WHERE "trains"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mTrain Load (0.1ms)[0m  [1m[34mSELECT  "trains".* FROM "trains" WHERE "trains"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  Rendered tickets/index.html.erb within layouts/application (17.8ms)
+Completed 200 OK in 114ms (Views: 105.0ms | ActiveRecord: 5.5ms)
+
+
+Started GET "/tickets" for 127.0.0.1 at 2016-12-07 22:48:19 +0500
+Processing by TicketsController#index as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering tickets/index.html.erb within layouts/application
+  [1m[36mTicket Load (0.2ms)[0m  [1m[34mSELECT "tickets".* FROM "tickets"[0m
+  [1m[36mTrain Load (0.1ms)[0m  [1m[34mSELECT  "trains".* FROM "trains" WHERE "trains"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mTrain Load (0.1ms)[0m  [1m[34mSELECT  "trains".* FROM "trains" WHERE "trains"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  Rendered tickets/index.html.erb within layouts/application (9.4ms)
+Completed 200 OK in 73ms (Views: 67.2ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/tickets/1" for 127.0.0.1 at 2016-12-07 22:48:20 +0500
+Processing by TicketsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mTicket Load (0.2ms)[0m  [1m[34mSELECT  "tickets".* FROM "tickets" WHERE "tickets"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering tickets/show.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mTrain Load (0.1ms)[0m  [1m[34mSELECT  "trains".* FROM "trains" WHERE "trains"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mRailwayStation Load (0.1ms)[0m  [1m[34mSELECT  "railway_stations".* FROM "railway_stations" WHERE "railway_stations"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "railway_stations".* FROM "railway_stations" WHERE "railway_stations"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered tickets/show.html.erb within layouts/application (67.0ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+Completed 200 OK in 142ms (Views: 136.4ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/tickets/2" for 127.0.0.1 at 2016-12-07 22:48:26 +0500
+Processing by TicketsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mTicket Load (0.2ms)[0m  [1m[34mSELECT  "tickets".* FROM "tickets" WHERE "tickets"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering tickets/show.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mTrain Load (0.1ms)[0m  [1m[34mSELECT  "trains".* FROM "trains" WHERE "trains"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mRailwayStation Load (0.1ms)[0m  [1m[34mSELECT  "railway_stations".* FROM "railway_stations" WHERE "railway_stations"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mRailwayStation Load (0.0ms)[0m  [1m[34mSELECT  "railway_stations".* FROM "railway_stations" WHERE "railway_stations"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  Rendered tickets/show.html.erb within layouts/application (8.5ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+Completed 200 OK in 75ms (Views: 72.7ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/tickets" for 127.0.0.1 at 2016-12-07 22:48:27 +0500
+Processing by TicketsController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering tickets/index.html.erb within layouts/application
+  [1m[36mTicket Load (0.2ms)[0m  [1m[34mSELECT "tickets".* FROM "tickets"[0m
+  [1m[36mTrain Load (0.1ms)[0m  [1m[34mSELECT  "trains".* FROM "trains" WHERE "trains"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mTrain Load (0.0ms)[0m  [1m[34mSELECT  "trains".* FROM "trains" WHERE "trains"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  Rendered tickets/index.html.erb within layouts/application (5.3ms)
+Completed 200 OK in 65ms (Views: 60.5ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/tickets" for 127.0.0.1 at 2016-12-07 22:48:29 +0500
+Processing by TicketsController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering tickets/index.html.erb within layouts/application
+  [1m[36mTicket Load (0.1ms)[0m  [1m[34mSELECT "tickets".* FROM "tickets"[0m
+  [1m[36mTrain Load (0.1ms)[0m  [1m[34mSELECT  "trains".* FROM "trains" WHERE "trains"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mTrain Load (0.1ms)[0m  [1m[34mSELECT  "trains".* FROM "trains" WHERE "trains"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  Rendered tickets/index.html.erb within layouts/application (8.2ms)
+Completed 200 OK in 78ms (Views: 64.8ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/tickets" for 127.0.0.1 at 2016-12-07 22:48:30 +0500
+Processing by TicketsController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering tickets/index.html.erb within layouts/application
+  [1m[36mTicket Load (0.1ms)[0m  [1m[34mSELECT "tickets".* FROM "tickets"[0m
+  [1m[36mTrain Load (0.1ms)[0m  [1m[34mSELECT  "trains".* FROM "trains" WHERE "trains"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mTrain Load (0.1ms)[0m  [1m[34mSELECT  "trains".* FROM "trains" WHERE "trains"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  Rendered tickets/index.html.erb within layouts/application (8.5ms)
+Completed 200 OK in 66ms (Views: 61.0ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/tickets" for 127.0.0.1 at 2016-12-07 22:50:07 +0500
+Processing by TicketsController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering tickets/index.html.erb within layouts/application
+  [1m[36mTicket Load (0.2ms)[0m  [1m[34mSELECT "tickets".* FROM "tickets"[0m
+  [1m[36mTrain Load (0.2ms)[0m  [1m[34mSELECT  "trains".* FROM "trains" WHERE "trains"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mTrain Load (0.1ms)[0m  [1m[34mSELECT  "trains".* FROM "trains" WHERE "trains"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  Rendered tickets/index.html.erb within layouts/application (65.6ms)
+Completed 200 OK in 211ms (Views: 171.9ms | ActiveRecord: 6.5ms)
+
+
+Started GET "/tickets" for 127.0.0.1 at 2016-12-07 22:50:09 +0500
+Processing by TicketsController#index as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering tickets/index.html.erb within layouts/application
+  [1m[36mTicket Load (0.1ms)[0m  [1m[34mSELECT "tickets".* FROM "tickets"[0m
+  [1m[36mTrain Load (0.1ms)[0m  [1m[34mSELECT  "trains".* FROM "trains" WHERE "trains"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mTrain Load (0.1ms)[0m  [1m[34mSELECT  "trains".* FROM "trains" WHERE "trains"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  Rendered tickets/index.html.erb within layouts/application (6.8ms)
+Completed 200 OK in 80ms (Views: 75.2ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/tickets" for 127.0.0.1 at 2016-12-07 22:50:11 +0500
+Processing by TicketsController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering tickets/index.html.erb within layouts/application
+  [1m[36mTicket Load (0.2ms)[0m  [1m[34mSELECT "tickets".* FROM "tickets"[0m
+  [1m[36mTrain Load (0.1ms)[0m  [1m[34mSELECT  "trains".* FROM "trains" WHERE "trains"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mTrain Load (0.1ms)[0m  [1m[34mSELECT  "trains".* FROM "trains" WHERE "trains"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  Rendered tickets/index.html.erb within layouts/application (7.7ms)
+Completed 200 OK in 63ms (Views: 57.9ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/tickets" for 127.0.0.1 at 2016-12-07 22:50:13 +0500
+Processing by TicketsController#index as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering tickets/index.html.erb within layouts/application
+  [1m[36mTicket Load (0.1ms)[0m  [1m[34mSELECT "tickets".* FROM "tickets"[0m
+  [1m[36mTrain Load (0.1ms)[0m  [1m[34mSELECT  "trains".* FROM "trains" WHERE "trains"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mTrain Load (0.0ms)[0m  [1m[34mSELECT  "trains".* FROM "trains" WHERE "trains"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  Rendered tickets/index.html.erb within layouts/application (9.6ms)
+Completed 200 OK in 65ms (Views: 60.2ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/tickets" for 127.0.0.1 at 2016-12-07 22:50:13 +0500
+Processing by TicketsController#index as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering tickets/index.html.erb within layouts/application
+  [1m[36mTicket Load (0.1ms)[0m  [1m[34mSELECT "tickets".* FROM "tickets"[0m
+  [1m[36mTrain Load (0.1ms)[0m  [1m[34mSELECT  "trains".* FROM "trains" WHERE "trains"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mTrain Load (0.1ms)[0m  [1m[34mSELECT  "trains".* FROM "trains" WHERE "trains"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  Rendered tickets/index.html.erb within layouts/application (8.9ms)
+Completed 200 OK in 64ms (Views: 59.9ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/tickets" for 127.0.0.1 at 2016-12-07 22:51:06 +0500
+Processing by TicketsController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering tickets/index.html.erb within layouts/application
+  [1m[36mTicket Load (0.2ms)[0m  [1m[34mSELECT "tickets".* FROM "tickets"[0m
+  [1m[36mTrain Load (0.1ms)[0m  [1m[34mSELECT  "trains".* FROM "trains" WHERE "trains"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mTrain Load (0.1ms)[0m  [1m[34mSELECT  "trains".* FROM "trains" WHERE "trains"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  Rendered tickets/index.html.erb within layouts/application (60.3ms)
+Completed 200 OK in 169ms (Views: 116.6ms | ActiveRecord: 5.2ms)
+
+
+Started GET "/tickets" for 127.0.0.1 at 2016-12-07 22:51:08 +0500
+Processing by TicketsController#index as HTML
+  [1m[36mUser Load (2.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering tickets/index.html.erb within layouts/application
+  [1m[36mTicket Load (0.2ms)[0m  [1m[34mSELECT "tickets".* FROM "tickets"[0m
+  [1m[36mTrain Load (0.1ms)[0m  [1m[34mSELECT  "trains".* FROM "trains" WHERE "trains"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mTrain Load (0.1ms)[0m  [1m[34mSELECT  "trains".* FROM "trains" WHERE "trains"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  Rendered tickets/index.html.erb within layouts/application (6.1ms)
+Completed 200 OK in 62ms (Views: 57.7ms | ActiveRecord: 2.5ms)
+
+
+Started GET "/tickets" for 127.0.0.1 at 2016-12-07 22:51:09 +0500
+Processing by TicketsController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering tickets/index.html.erb within layouts/application
+  [1m[36mTicket Load (0.2ms)[0m  [1m[34mSELECT "tickets".* FROM "tickets"[0m
+  [1m[36mTrain Load (0.1ms)[0m  [1m[34mSELECT  "trains".* FROM "trains" WHERE "trains"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mTrain Load (3.2ms)[0m  [1m[34mSELECT  "trains".* FROM "trains" WHERE "trains"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  Rendered tickets/index.html.erb within layouts/application (9.9ms)
+Completed 200 OK in 64ms (Views: 59.0ms | ActiveRecord: 3.7ms)
+
+
+Started GET "/tickets" for 127.0.0.1 at 2016-12-07 22:51:10 +0500
+Processing by TicketsController#index as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering tickets/index.html.erb within layouts/application
+  [1m[36mTicket Load (0.2ms)[0m  [1m[34mSELECT "tickets".* FROM "tickets"[0m
+  [1m[36mTrain Load (0.1ms)[0m  [1m[34mSELECT  "trains".* FROM "trains" WHERE "trains"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mTrain Load (0.1ms)[0m  [1m[34mSELECT  "trains".* FROM "trains" WHERE "trains"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  Rendered tickets/index.html.erb within layouts/application (12.0ms)
+Completed 200 OK in 69ms (Views: 62.8ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/tickets" for 127.0.0.1 at 2016-12-07 22:51:33 +0500
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by TicketsController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering tickets/index.html.erb within layouts/application
+  [1m[36mTicket Load (0.2ms)[0m  [1m[34mSELECT "tickets".* FROM "tickets"[0m
+  [1m[36mTrain Load (0.1ms)[0m  [1m[34mSELECT  "trains".* FROM "trains" WHERE "trains"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mTrain Load (0.1ms)[0m  [1m[34mSELECT  "trains".* FROM "trains" WHERE "trains"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  Rendered tickets/index.html.erb within layouts/application (96.6ms)
+Completed 200 OK in 807ms (Views: 743.4ms | ActiveRecord: 2.4ms)
+
+
+Started GET "/tickets" for 127.0.0.1 at 2016-12-07 22:51:35 +0500
+Processing by TicketsController#index as HTML
+  [1m[36mUser Load (1.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering tickets/index.html.erb within layouts/application
+  [1m[36mTicket Load (0.2ms)[0m  [1m[34mSELECT "tickets".* FROM "tickets"[0m
+  [1m[36mTrain Load (0.2ms)[0m  [1m[34mSELECT  "trains".* FROM "trains" WHERE "trains"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mTrain Load (0.1ms)[0m  [1m[34mSELECT  "trains".* FROM "trains" WHERE "trains"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  Rendered tickets/index.html.erb within layouts/application (13.4ms)
+Completed 200 OK in 150ms (Views: 139.9ms | ActiveRecord: 1.9ms)
+
+
+Started GET "/tickets" for 127.0.0.1 at 2016-12-07 22:51:37 +0500
+Processing by TicketsController#index as HTML
+  [1m[36mUser Load (2.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering tickets/index.html.erb within layouts/application
+  [1m[36mTicket Load (0.1ms)[0m  [1m[34mSELECT "tickets".* FROM "tickets"[0m
+  [1m[36mTrain Load (0.2ms)[0m  [1m[34mSELECT  "trains".* FROM "trains" WHERE "trains"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mTrain Load (0.1ms)[0m  [1m[34mSELECT  "trains".* FROM "trains" WHERE "trains"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  Rendered tickets/index.html.erb within layouts/application (7.8ms)
+Completed 200 OK in 72ms (Views: 67.0ms | ActiveRecord: 2.7ms)
+
+
+Started GET "/tickets/2" for 127.0.0.1 at 2016-12-07 22:51:47 +0500
+Processing by TicketsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mTicket Load (0.4ms)[0m  [1m[34mSELECT  "tickets".* FROM "tickets" WHERE "tickets"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering tickets/show.html.erb within layouts/application
+  [1m[36mUser Load (5.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mTrain Load (0.1ms)[0m  [1m[34mSELECT  "trains".* FROM "trains" WHERE "trains"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mRailwayStation Load (0.2ms)[0m  [1m[34mSELECT  "railway_stations".* FROM "railway_stations" WHERE "railway_stations"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mRailwayStation Load (0.1ms)[0m  [1m[34mSELECT  "railway_stations".* FROM "railway_stations" WHERE "railway_stations"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  Rendered tickets/show.html.erb within layouts/application (69.2ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+Completed 200 OK in 133ms (Views: 122.0ms | ActiveRecord: 6.6ms)
+
+
+Started GET "/tickets/1" for 127.0.0.1 at 2016-12-07 22:51:52 +0500
+Processing by TicketsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mTicket Load (0.4ms)[0m  [1m[34mSELECT  "tickets".* FROM "tickets" WHERE "tickets"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering tickets/show.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mTrain Load (0.1ms)[0m  [1m[34mSELECT  "trains".* FROM "trains" WHERE "trains"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mRailwayStation Load (0.1ms)[0m  [1m[34mSELECT  "railway_stations".* FROM "railway_stations" WHERE "railway_stations"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "railway_stations".* FROM "railway_stations" WHERE "railway_stations"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered tickets/show.html.erb within layouts/application (5.2ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+Completed 200 OK in 61ms (Views: 56.4ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/search" for 127.0.0.1 at 2016-12-07 22:51:59 +0500
+Processing by SearchesController#show as HTML
+  Rendering searches/show.html.erb within layouts/application
+  [1m[36mRailwayStation Load (0.4ms)[0m  [1m[34mSELECT "railway_stations".* FROM "railway_stations"[0m
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT "railway_stations".* FROM "railway_stations"[0m
+  Rendered searches/show.html.erb within layouts/application (17.5ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+Completed 200 OK in 80ms (Views: 72.7ms | ActiveRecord: 0.6ms)
+
+
+Started POST "/search" for 127.0.0.1 at 2016-12-07 22:52:01 +0500
+Processing by SearchesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"6E/YO7/VxmMVXGZL4tKcVNzrrSyCNLQ7gC9b3CPLUPlF/77bI4i5FrgDCd/ZnrWt8HIb0GJpzu3q+7BBAV3Azg==", "search"=>{"start_station_id"=>"1", "end_station_id"=>"2"}, "commit"=>"Search"}
+  [1m[35mSQL (0.3ms)[0m  [1m[34mSELECT "trains"."id" AS t0_r0, "trains"."number" AS t0_r1, "trains"."created_at" AS t0_r2, "trains"."updated_at" AS t0_r3, "trains"."current_station_id" AS t0_r4, "trains"."route_id" AS t0_r5, "trains"."ordering" AS t0_r6, "routes"."id" AS t1_r0, "routes"."name" AS t1_r1, "routes"."created_at" AS t1_r2, "routes"."updated_at" AS t1_r3, "railway_stations"."id" AS t2_r0, "railway_stations"."title" AS t2_r1, "railway_stations"."created_at" AS t2_r2, "railway_stations"."updated_at" AS t2_r3 FROM "trains" LEFT OUTER JOIN "routes" ON "routes"."id" = "trains"."route_id" LEFT OUTER JOIN "railway_stations_routes" ON "railway_stations_routes"."route_id" = "routes"."id" LEFT OUTER JOIN "railway_stations" ON "railway_stations"."id" = "railway_stations_routes"."railway_station_id" WHERE "railway_stations"."id" = ?[0m  [["id", "1"]]
+  [1m[35mSQL (0.3ms)[0m  [1m[34mSELECT "trains"."id" AS t0_r0, "trains"."number" AS t0_r1, "trains"."created_at" AS t0_r2, "trains"."updated_at" AS t0_r3, "trains"."current_station_id" AS t0_r4, "trains"."route_id" AS t0_r5, "trains"."ordering" AS t0_r6, "routes"."id" AS t1_r0, "routes"."name" AS t1_r1, "routes"."created_at" AS t1_r2, "routes"."updated_at" AS t1_r3, "railway_stations"."id" AS t2_r0, "railway_stations"."title" AS t2_r1, "railway_stations"."created_at" AS t2_r2, "railway_stations"."updated_at" AS t2_r3 FROM "trains" LEFT OUTER JOIN "routes" ON "routes"."id" = "trains"."route_id" LEFT OUTER JOIN "railway_stations_routes" ON "railway_stations_routes"."route_id" = "routes"."id" LEFT OUTER JOIN "railway_stations" ON "railway_stations"."id" = "railway_stations_routes"."railway_station_id" WHERE "railway_stations"."id" = ?[0m  [["id", "2"]]
+  Rendering searches/show.html.erb within layouts/application
+  [1m[36mRailwayStation Load (0.2ms)[0m  [1m[34mSELECT "railway_stations".* FROM "railway_stations"[0m
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT "railway_stations".* FROM "railway_stations"[0m
+  [1m[36mRailwayStation Load (0.1ms)[0m  [1m[34mSELECT  "railway_stations".* FROM "railway_stations" WHERE "railway_stations"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mRailwayStationsRoute Load (0.2ms)[0m  [1m[34mSELECT  "railway_stations_routes".* FROM "railway_stations_routes" WHERE "railway_stations_routes"."railway_station_id" = ? AND "railway_stations_routes"."route_id" = 6 ORDER BY "railway_stations_routes"."id" ASC LIMIT ?[0m  [["railway_station_id", 1], ["LIMIT", 1]]
+  [1m[36mRailwayStation Load (0.1ms)[0m  [1m[34mSELECT  "railway_stations".* FROM "railway_stations" WHERE "railway_stations"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mRailwayStationsRoute Load (0.1ms)[0m  [1m[34mSELECT  "railway_stations_routes".* FROM "railway_stations_routes" WHERE "railway_stations_routes"."railway_station_id" = ? AND "railway_stations_routes"."route_id" = 6 ORDER BY "railway_stations_routes"."id" ASC LIMIT ?[0m  [["railway_station_id", 2], ["LIMIT", 1]]
+  Rendered searches/show.html.erb within layouts/application (37.4ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+Completed 200 OK in 167ms (Views: 98.0ms | ActiveRecord: 11.1ms)
+
+
+Started POST "/search" for 127.0.0.1 at 2016-12-07 22:52:02 +0500
+Processing by SearchesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"/9E7kz4se5YxVBvsm3ULZgP1pI8YlAQk85ZrB8OToQZSYV1zonEE45wLdHigOSKfL2wSc/jJfvKZQoCa4QUxMQ==", "search"=>{"start_station_id"=>"1", "end_station_id"=>"2"}, "train_id"=>"4", "start_station_id"=>"1", "end_station_id"=>"2", "commit"=>"Buy ticket"}
+  [1m[35mSQL (4.9ms)[0m  [1m[34mSELECT "trains"."id" AS t0_r0, "trains"."number" AS t0_r1, "trains"."created_at" AS t0_r2, "trains"."updated_at" AS t0_r3, "trains"."current_station_id" AS t0_r4, "trains"."route_id" AS t0_r5, "trains"."ordering" AS t0_r6, "routes"."id" AS t1_r0, "routes"."name" AS t1_r1, "routes"."created_at" AS t1_r2, "routes"."updated_at" AS t1_r3, "railway_stations"."id" AS t2_r0, "railway_stations"."title" AS t2_r1, "railway_stations"."created_at" AS t2_r2, "railway_stations"."updated_at" AS t2_r3 FROM "trains" LEFT OUTER JOIN "routes" ON "routes"."id" = "trains"."route_id" LEFT OUTER JOIN "railway_stations_routes" ON "railway_stations_routes"."route_id" = "routes"."id" LEFT OUTER JOIN "railway_stations" ON "railway_stations"."id" = "railway_stations_routes"."railway_station_id" WHERE "railway_stations"."id" = ?[0m  [["id", "1"]]
+  [1m[35mSQL (0.2ms)[0m  [1m[34mSELECT "trains"."id" AS t0_r0, "trains"."number" AS t0_r1, "trains"."created_at" AS t0_r2, "trains"."updated_at" AS t0_r3, "trains"."current_station_id" AS t0_r4, "trains"."route_id" AS t0_r5, "trains"."ordering" AS t0_r6, "routes"."id" AS t1_r0, "routes"."name" AS t1_r1, "routes"."created_at" AS t1_r2, "routes"."updated_at" AS t1_r3, "railway_stations"."id" AS t2_r0, "railway_stations"."title" AS t2_r1, "railway_stations"."created_at" AS t2_r2, "railway_stations"."updated_at" AS t2_r3 FROM "trains" LEFT OUTER JOIN "routes" ON "routes"."id" = "trains"."route_id" LEFT OUTER JOIN "railway_stations_routes" ON "railway_stations_routes"."route_id" = "routes"."id" LEFT OUTER JOIN "railway_stations" ON "railway_stations"."id" = "railway_stations_routes"."railway_station_id" WHERE "railway_stations"."id" = ?[0m  [["id", "2"]]
+  Rendering searches/show.html.erb within layouts/application
+  [1m[36mRailwayStation Load (0.2ms)[0m  [1m[34mSELECT "railway_stations".* FROM "railway_stations"[0m
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT "railway_stations".* FROM "railway_stations"[0m
+  [1m[36mRailwayStation Load (0.1ms)[0m  [1m[34mSELECT  "railway_stations".* FROM "railway_stations" WHERE "railway_stations"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mRailwayStationsRoute Load (0.1ms)[0m  [1m[34mSELECT  "railway_stations_routes".* FROM "railway_stations_routes" WHERE "railway_stations_routes"."railway_station_id" = ? AND "railway_stations_routes"."route_id" = 6 ORDER BY "railway_stations_routes"."id" ASC LIMIT ?[0m  [["railway_station_id", 1], ["LIMIT", 1]]
+  [1m[36mRailwayStation Load (0.1ms)[0m  [1m[34mSELECT  "railway_stations".* FROM "railway_stations" WHERE "railway_stations"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mRailwayStationsRoute Load (0.2ms)[0m  [1m[34mSELECT  "railway_stations_routes".* FROM "railway_stations_routes" WHERE "railway_stations_routes"."railway_station_id" = ? AND "railway_stations_routes"."route_id" = 6 ORDER BY "railway_stations_routes"."id" ASC LIMIT ?[0m  [["railway_station_id", 2], ["LIMIT", 1]]
+  Rendered searches/show.html.erb within layouts/application (18.5ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+Completed 200 OK in 95ms (Views: 81.7ms | ActiveRecord: 6.0ms)
+
+
+Started POST "/search" for 127.0.0.1 at 2016-12-07 22:52:04 +0500
+Processing by SearchesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"E5TNwlpdZWNKQBfifg4Il0LSzA/4kTNnfBggz9Bc6gK+JKsixgAaFucfeHZFQiFubkt68xjMSbEWzMtS8sp6NQ==", "search"=>{"start_station_id"=>"1", "end_station_id"=>"4"}, "commit"=>"Search", "train_id"=>"4", "start_station_id"=>"1", "end_station_id"=>"2"}
+  [1m[35mSQL (0.3ms)[0m  [1m[34mSELECT "trains"."id" AS t0_r0, "trains"."number" AS t0_r1, "trains"."created_at" AS t0_r2, "trains"."updated_at" AS t0_r3, "trains"."current_station_id" AS t0_r4, "trains"."route_id" AS t0_r5, "trains"."ordering" AS t0_r6, "routes"."id" AS t1_r0, "routes"."name" AS t1_r1, "routes"."created_at" AS t1_r2, "routes"."updated_at" AS t1_r3, "railway_stations"."id" AS t2_r0, "railway_stations"."title" AS t2_r1, "railway_stations"."created_at" AS t2_r2, "railway_stations"."updated_at" AS t2_r3 FROM "trains" LEFT OUTER JOIN "routes" ON "routes"."id" = "trains"."route_id" LEFT OUTER JOIN "railway_stations_routes" ON "railway_stations_routes"."route_id" = "routes"."id" LEFT OUTER JOIN "railway_stations" ON "railway_stations"."id" = "railway_stations_routes"."railway_station_id" WHERE "railway_stations"."id" = ?[0m  [["id", "1"]]
+  [1m[35mSQL (0.2ms)[0m  [1m[34mSELECT "trains"."id" AS t0_r0, "trains"."number" AS t0_r1, "trains"."created_at" AS t0_r2, "trains"."updated_at" AS t0_r3, "trains"."current_station_id" AS t0_r4, "trains"."route_id" AS t0_r5, "trains"."ordering" AS t0_r6, "routes"."id" AS t1_r0, "routes"."name" AS t1_r1, "routes"."created_at" AS t1_r2, "routes"."updated_at" AS t1_r3, "railway_stations"."id" AS t2_r0, "railway_stations"."title" AS t2_r1, "railway_stations"."created_at" AS t2_r2, "railway_stations"."updated_at" AS t2_r3 FROM "trains" LEFT OUTER JOIN "routes" ON "routes"."id" = "trains"."route_id" LEFT OUTER JOIN "railway_stations_routes" ON "railway_stations_routes"."route_id" = "routes"."id" LEFT OUTER JOIN "railway_stations" ON "railway_stations"."id" = "railway_stations_routes"."railway_station_id" WHERE "railway_stations"."id" = ?[0m  [["id", "4"]]
+  Rendering searches/show.html.erb within layouts/application
+  [1m[36mRailwayStation Load (0.1ms)[0m  [1m[34mSELECT "railway_stations".* FROM "railway_stations"[0m
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT "railway_stations".* FROM "railway_stations"[0m
+  [1m[36mRailwayStation Load (0.1ms)[0m  [1m[34mSELECT  "railway_stations".* FROM "railway_stations" WHERE "railway_stations"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mRailwayStationsRoute Load (0.1ms)[0m  [1m[34mSELECT  "railway_stations_routes".* FROM "railway_stations_routes" WHERE "railway_stations_routes"."railway_station_id" = ? AND "railway_stations_routes"."route_id" = 2 ORDER BY "railway_stations_routes"."id" ASC LIMIT ?[0m  [["railway_station_id", 1], ["LIMIT", 1]]
+  [1m[36mRailwayStation Load (0.1ms)[0m  [1m[34mSELECT  "railway_stations".* FROM "railway_stations" WHERE "railway_stations"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mRailwayStationsRoute Load (0.1ms)[0m  [1m[34mSELECT  "railway_stations_routes".* FROM "railway_stations_routes" WHERE "railway_stations_routes"."railway_station_id" = ? AND "railway_stations_routes"."route_id" = 2 ORDER BY "railway_stations_routes"."id" ASC LIMIT ?[0m  [["railway_station_id", 4], ["LIMIT", 1]]
+  Rendered searches/show.html.erb within layouts/application (18.5ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+Completed 200 OK in 93ms (Views: 82.5ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/tickets/new?utf8=%E2%9C%93&train_id=3&start_station_id=1&end_station_id=4&commit=Buy+ticket" for 127.0.0.1 at 2016-12-07 22:52:06 +0500
+Processing by TicketsController#new as HTML
+  Parameters: {"utf8"=>"✓", "train_id"=>"3", "start_station_id"=>"1", "end_station_id"=>"4", "commit"=>"Buy ticket"}
+  [1m[36mTrain Load (0.2ms)[0m  [1m[34mSELECT  "trains".* FROM "trains" WHERE "trains"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mRailwayStation Load (0.1ms)[0m  [1m[34mSELECT  "railway_stations".* FROM "railway_stations" WHERE "railway_stations"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mRailwayStation Load (0.1ms)[0m  [1m[34mSELECT  "railway_stations".* FROM "railway_stations" WHERE "railway_stations"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering tickets/new.html.erb within layouts/application
+  Rendered common/_errors.html.erb (0.4ms)
+  Rendered tickets/_form.html.erb (9.6ms)
+  Rendered tickets/new.html.erb within layouts/application (11.9ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+Completed 200 OK in 73ms (Views: 67.1ms | ActiveRecord: 0.5ms)
+
+
+Started POST "/tickets" for 127.0.0.1 at 2016-12-07 22:52:11 +0500
+Processing by TicketsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"dSWBsNmuyRGQm5zgYptqGVljAeBtN8HlzChhLMC5N8TYledQRfO2ZD3E83RZ10Pgdfq3HI1quzOm/Iqx4i+n8w==", "ticket"=>{"train_id"=>"3", "start_station_id"=>"1", "end_station_id"=>"4", "pas_name"=>"5555555", "pas_pasport"=>"5555555"}, "commit"=>"Buy ticket"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mTrain Load (0.1ms)[0m  [1m[34mSELECT  "trains".* FROM "trains" WHERE "trains"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mRailwayStation Load (0.1ms)[0m  [1m[34mSELECT  "railway_stations".* FROM "railway_stations" WHERE "railway_stations"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mRailwayStation Load (0.0ms)[0m  [1m[34mSELECT  "railway_stations".* FROM "railway_stations" WHERE "railway_stations"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[35mSQL (4.1ms)[0m  [1m[32mINSERT INTO "tickets" ("created_at", "updated_at", "user_id", "train_id", "start_station_id", "end_station_id", "pas_name", "pas_pasport") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["created_at", 2016-12-07 17:52:11 UTC], ["updated_at", 2016-12-07 17:52:11 UTC], ["user_id", 4], ["train_id", 3], ["start_station_id", 1], ["end_station_id", 4], ["pas_name", "5555555"], ["pas_pasport", "5555555"]]
+  [1m[35m (7.3ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/tickets/4
+Completed 302 Found in 44ms (ActiveRecord: 12.1ms)
+
+
+Started GET "/tickets/4" for 127.0.0.1 at 2016-12-07 22:52:11 +0500
+Processing by TicketsController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mTicket Load (0.2ms)[0m  [1m[34mSELECT  "tickets".* FROM "tickets" WHERE "tickets"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering tickets/show.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mTrain Load (0.1ms)[0m  [1m[34mSELECT  "trains".* FROM "trains" WHERE "trains"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mRailwayStation Load (0.1ms)[0m  [1m[34mSELECT  "railway_stations".* FROM "railway_stations" WHERE "railway_stations"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mRailwayStation Load (0.1ms)[0m  [1m[34mSELECT  "railway_stations".* FROM "railway_stations" WHERE "railway_stations"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  Rendered tickets/show.html.erb within layouts/application (12.8ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+Completed 200 OK in 76ms (Views: 73.1ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/tickets" for 127.0.0.1 at 2016-12-07 22:52:16 +0500
+Processing by TicketsController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering tickets/index.html.erb within layouts/application
+  [1m[36mTicket Load (0.2ms)[0m  [1m[34mSELECT "tickets".* FROM "tickets"[0m
+  [1m[36mTrain Load (0.1ms)[0m  [1m[34mSELECT  "trains".* FROM "trains" WHERE "trains"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mTrain Load (1.3ms)[0m  [1m[34mSELECT  "trains".* FROM "trains" WHERE "trains"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "trains".* FROM "trains" WHERE "trains"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  Rendered tickets/index.html.erb within layouts/application (11.4ms)
+Completed 200 OK in 71ms (Views: 64.2ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/tickets/4" for 127.0.0.1 at 2016-12-07 22:52:18 +0500
+Processing by TicketsController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mTicket Load (0.1ms)[0m  [1m[34mSELECT  "tickets".* FROM "tickets" WHERE "tickets"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering tickets/show.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mTrain Load (0.1ms)[0m  [1m[34mSELECT  "trains".* FROM "trains" WHERE "trains"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mRailwayStation Load (0.1ms)[0m  [1m[34mSELECT  "railway_stations".* FROM "railway_stations" WHERE "railway_stations"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mRailwayStation Load (0.1ms)[0m  [1m[34mSELECT  "railway_stations".* FROM "railway_stations" WHERE "railway_stations"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  Rendered tickets/show.html.erb within layouts/application (16.7ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+Completed 200 OK in 85ms (Views: 81.4ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/tickets" for 127.0.0.1 at 2016-12-07 22:52:20 +0500
+Processing by TicketsController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering tickets/index.html.erb within layouts/application
+  [1m[36mTicket Load (0.2ms)[0m  [1m[34mSELECT "tickets".* FROM "tickets"[0m
+  [1m[36mTrain Load (0.1ms)[0m  [1m[34mSELECT  "trains".* FROM "trains" WHERE "trains"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mTrain Load (0.1ms)[0m  [1m[34mSELECT  "trains".* FROM "trains" WHERE "trains"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "trains".* FROM "trains" WHERE "trains"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  Rendered tickets/index.html.erb within layouts/application (9.5ms)
+Completed 200 OK in 74ms (Views: 69.9ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/tickets" for 127.0.0.1 at 2016-12-07 22:54:18 +0500
+Processing by TicketsController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering tickets/index.html.erb within layouts/application
+  [1m[36mTicket Load (0.2ms)[0m  [1m[34mSELECT "tickets".* FROM "tickets"[0m
+  Rendered collection of tickets/_ticket.html.erb [3 times] (0.7ms)
+  Rendered tickets/index.html.erb within layouts/application (5.4ms)
+Completed 500 Internal Server Error in 18ms (ActiveRecord: 0.4ms)
+
+
+  
+SyntaxError (/home/clu/code/trainsrep/app/views/tickets/_ticket.html.erb:5: syntax error, unexpected ')'
+...fer.append=( link_to 'Edit',  );@output_buffer.safe_append='...
+...                               ^
+/home/clu/code/trainsrep/app/views/tickets/_ticket.html.erb:6: syntax error, unexpected keyword_end, expecting ')'
+'.freeze;   end 
+               ^
+/home/clu/code/trainsrep/app/views/tickets/_ticket.html.erb:9: syntax error, unexpected keyword_ensure, expecting ')'
+/home/clu/code/trainsrep/app/views/tickets/_ticket.html.erb:11: syntax error, unexpected keyword_end, expecting ')'):
+  
+app/views/tickets/_ticket.html.erb:5: syntax error, unexpected ')'
+app/views/tickets/_ticket.html.erb:6: syntax error, unexpected keyword_end, expecting ')'
+app/views/tickets/_ticket.html.erb:9: syntax error, unexpected keyword_ensure, expecting ')'
+app/views/tickets/_ticket.html.erb:11: syntax error, unexpected keyword_end, expecting ')'
+app/views/tickets/index.html.erb:12:in `_app_views_tickets_index_html_erb__791992816675695155_70231071655560'
+  Rendering /home/clu/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /home/clu/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /home/clu/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (31.4ms)
+  Rendering /home/clu/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /home/clu/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (6.2ms)
+  Rendering /home/clu/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /home/clu/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.8ms)
+  Rendered /home/clu/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (71.1ms)
+Started GET "/tickets" for 127.0.0.1 at 2016-12-07 22:54:27 +0500
+Processing by TicketsController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering tickets/index.html.erb within layouts/application
+  [1m[36mTicket Load (0.2ms)[0m  [1m[34mSELECT "tickets".* FROM "tickets"[0m
+  [1m[36mTrain Load (0.1ms)[0m  [1m[34mSELECT  "trains".* FROM "trains" WHERE "trains"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mTrain Load (0.1ms)[0m  [1m[34mSELECT  "trains".* FROM "trains" WHERE "trains"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "trains".* FROM "trains" WHERE "trains"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  Rendered collection of tickets/_ticket.html.erb [3 times] (17.3ms)
+  Rendered tickets/index.html.erb within layouts/application (23.4ms)
+Completed 200 OK in 122ms (Views: 116.4ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/tickets" for 127.0.0.1 at 2016-12-07 22:54:28 +0500
+Processing by TicketsController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering tickets/index.html.erb within layouts/application
+  [1m[36mTicket Load (0.2ms)[0m  [1m[34mSELECT "tickets".* FROM "tickets"[0m
+  [1m[36mTrain Load (0.1ms)[0m  [1m[34mSELECT  "trains".* FROM "trains" WHERE "trains"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mTrain Load (0.1ms)[0m  [1m[34mSELECT  "trains".* FROM "trains" WHERE "trains"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "trains".* FROM "trains" WHERE "trains"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  Rendered collection of tickets/_ticket.html.erb [3 times] (14.5ms)
+  Rendered tickets/index.html.erb within layouts/application (22.6ms)
+Completed 200 OK in 100ms (Views: 93.0ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/tickets" for 127.0.0.1 at 2016-12-07 22:54:36 +0500
+Processing by TicketsController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering tickets/index.html.erb within layouts/application
+  [1m[36mTicket Load (0.2ms)[0m  [1m[34mSELECT "tickets".* FROM "tickets"[0m
+  [1m[36mTrain Load (0.1ms)[0m  [1m[34mSELECT  "trains".* FROM "trains" WHERE "trains"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered collection of tickets/_ticket.html.erb [3 times] (277.8ms)
+  Rendered tickets/index.html.erb within layouts/application (288.1ms)
+Completed 500 Internal Server Error in 299ms (ActiveRecord: 0.5ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `edit_ticket' for #<#<Class:0x000000028af230>:0x00000006791778>
+Did you mean?  edit_ticket_url):
+    2:   <td>Train number: <%= ticket.train.number %></td>
+    3:   <td><%= link_to 'Show',  ticket %></td>
+    4:   <% if current_user.admin? %>
+    5:     <td><%= link_to 'Edit', edit_ticket  %></td>
+    6:   <% end %>
+    7:   <td><%= link_to 'Destroy', ticket, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+    8: </tr>
+  
+app/views/tickets/_ticket.html.erb:5:in `_app_views_tickets__ticket_html_erb__3465723829282313414_54141140'
+app/views/tickets/index.html.erb:12:in `_app_views_tickets_index_html_erb__791992816675695155_54301520'
+  Rendering /home/clu/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering /home/clu/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /home/clu/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (17.3ms)
+  Rendering /home/clu/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /home/clu/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (7.2ms)
+  Rendering /home/clu/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /home/clu/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered /home/clu/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (65.9ms)
+Started GET "/tickets" for 127.0.0.1 at 2016-12-07 22:54:49 +0500
+Processing by TicketsController#index as HTML
+  [1m[36mUser Load (1.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering tickets/index.html.erb within layouts/application
+  [1m[36mTicket Load (0.2ms)[0m  [1m[34mSELECT "tickets".* FROM "tickets"[0m
+  [1m[36mTrain Load (0.1ms)[0m  [1m[34mSELECT  "trains".* FROM "trains" WHERE "trains"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered collection of tickets/_ticket.html.erb [3 times] (11.9ms)
+  Rendered tickets/index.html.erb within layouts/application (17.4ms)
+Completed 500 Internal Server Error in 33ms (ActiveRecord: 1.7ms)
+
+
+  
+ActionView::Template::Error (No route matches {:action=>"edit", :controller=>"tickets"} missing required keys: [:id]):
+    2:   <td>Train number: <%= ticket.train.number %></td>
+    3:   <td><%= link_to 'Show',  ticket %></td>
+    4:   <% if current_user.admin? %>
+    5:     <td><%= link_to 'Edit', edit_ticket_path %></td>
+    6:   <% end %>
+    7:   <td><%= link_to 'Destroy', ticket, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+    8: </tr>
+  
+app/views/tickets/_ticket.html.erb:5:in `_app_views_tickets__ticket_html_erb__3465723829282313414_70231139546620'
+app/views/tickets/index.html.erb:12:in `_app_views_tickets_index_html_erb__791992816675695155_70231104818580'
+  Rendering /home/clu/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering /home/clu/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /home/clu/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (16.2ms)
+  Rendering /home/clu/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /home/clu/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (5.0ms)
+  Rendering /home/clu/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /home/clu/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (3.3ms)
+  Rendered /home/clu/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (65.7ms)
+Started GET "/tickets" for 127.0.0.1 at 2016-12-07 22:54:59 +0500
+Processing by TicketsController#index as HTML
+  [1m[36mUser Load (2.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering tickets/index.html.erb within layouts/application
+  [1m[36mTicket Load (0.1ms)[0m  [1m[34mSELECT "tickets".* FROM "tickets"[0m
+  [1m[36mTrain Load (0.1ms)[0m  [1m[34mSELECT  "trains".* FROM "trains" WHERE "trains"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mTrain Load (0.1ms)[0m  [1m[34mSELECT  "trains".* FROM "trains" WHERE "trains"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "trains".* FROM "trains" WHERE "trains"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  Rendered collection of tickets/_ticket.html.erb [3 times] (12.0ms)
+  Rendered tickets/index.html.erb within layouts/application (13.9ms)
+Completed 200 OK in 120ms (Views: 115.2ms | ActiveRecord: 3.1ms)
+
+
+Started GET "/tickets/2/edit" for 127.0.0.1 at 2016-12-07 22:55:01 +0500
+Processing by TicketsController#edit as HTML
+  Parameters: {"id"=>"2"}
+  Rendering tickets/edit.html.erb within layouts/application
+  Rendered tickets/_form.html.erb (1.3ms)
+  Rendered tickets/edit.html.erb within layouts/application (6.8ms)
+Completed 500 Internal Server Error in 9ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (First argument in form cannot contain nil or be empty):
+    1: <%= form_for(ticket) do |f| %>
+    2: 
+    3:   <%= render 'common/errors', resource: ticket %>
+    4: 
+  
+app/views/tickets/_form.html.erb:1:in `_app_views_tickets__form_html_erb___330343494872522987_70231070780600'
+app/views/tickets/edit.html.erb:3:in `_app_views_tickets_edit_html_erb___4272239041389318998_70231070933320'
+  Rendering /home/clu/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering /home/clu/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /home/clu/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (13.8ms)
+  Rendering /home/clu/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /home/clu/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.1ms)
+  Rendering /home/clu/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /home/clu/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.9ms)
+  Rendered /home/clu/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (50.6ms)
+Started PUT "/__web_console/repl_sessions/3ccbc5d63969eebdcb5311f166a6e74c" for 127.0.0.1 at 2016-12-07 22:55:21 +0500
+Started PUT "/__web_console/repl_sessions/3ccbc5d63969eebdcb5311f166a6e74c" for 127.0.0.1 at 2016-12-07 22:55:23 +0500
+Started GET "/tickets/2/edit" for 127.0.0.1 at 2016-12-07 22:56:03 +0500
+Processing by TicketsController#edit as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mTicket Load (0.1ms)[0m  [1m[34mSELECT  "tickets".* FROM "tickets" WHERE "tickets"."user_id" = ? AND "tickets"."id" = ? LIMIT ?[0m  [["user_id", 4], ["id", 2], ["LIMIT", 1]]
+Completed 404 Not Found in 47ms (ActiveRecord: 1.6ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Ticket with 'id'=2 [WHERE "tickets"."user_id" = ?]):
+  
+app/controllers/tickets_controller.rb:36:in `edit'
+  Rendering /home/clu/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /home/clu/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /home/clu/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (3.7ms)
+  Rendering /home/clu/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /home/clu/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.0ms)
+  Rendering /home/clu/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /home/clu/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.8ms)
+  Rendered /home/clu/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (51.2ms)
+Started GET "/tickets/2/edit" for 127.0.0.1 at 2016-12-07 22:56:37 +0500
+Processing by TicketsController#edit as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mTicket Load (0.1ms)[0m  [1m[34mSELECT  "tickets".* FROM "tickets" WHERE "tickets"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering tickets/edit.html.erb within layouts/application
+  Rendered common/_errors.html.erb (0.3ms)
+  Rendered tickets/_form.html.erb (6.3ms)
+  Rendered tickets/edit.html.erb within layouts/application (8.3ms)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+Completed 200 OK in 130ms (Views: 97.9ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/tickets/2/edit" for 127.0.0.1 at 2016-12-07 22:57:18 +0500
+Processing by TicketsController#edit as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mTicket Load (0.2ms)[0m  [1m[34mSELECT  "tickets".* FROM "tickets" WHERE "tickets"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering tickets/edit.html.erb within layouts/application
+  Rendered common/_errors.html.erb (0.3ms)
+  Rendered tickets/_form.html.erb (6.6ms)
+  Rendered tickets/edit.html.erb within layouts/application (8.4ms)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+Completed 200 OK in 132ms (Views: 97.8ms | ActiveRecord: 1.7ms)
+
+
+Started PATCH "/tickets/2" for 127.0.0.1 at 2016-12-07 22:57:19 +0500
+Processing by TicketsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"j3WYCtJf4NlhAQvLY8Bvvk+4Ei5cecoBoTGUG4PKIEYixf7qTgKfrMxeZF9YjEZHYyGk0rwksNfL5X+GoVywcQ==", "ticket"=>{"train_id"=>"3", "start_station_id"=>"1", "end_station_id"=>"4", "pas_name"=>"123", "pas_pasport"=>"123"}, "commit"=>"Update", "id"=>"2"}
+  [1m[36mTicket Load (0.4ms)[0m  [1m[34mSELECT  "tickets".* FROM "tickets" WHERE "tickets"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mTrain Load (0.1ms)[0m  [1m[34mSELECT  "trains".* FROM "trains" WHERE "trains"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mRailwayStation Load (0.1ms)[0m  [1m[34mSELECT  "railway_stations".* FROM "railway_stations" WHERE "railway_stations"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mRailwayStation Load (0.1ms)[0m  [1m[34mSELECT  "railway_stations".* FROM "railway_stations" WHERE "railway_stations"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/tickets/2
+Completed 302 Found in 90ms (ActiveRecord: 5.8ms)
+
+
+Started GET "/tickets/2" for 127.0.0.1 at 2016-12-07 22:57:19 +0500
+Processing by TicketsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mTicket Load (0.4ms)[0m  [1m[34mSELECT  "tickets".* FROM "tickets" WHERE "tickets"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering tickets/show.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mTrain Load (0.1ms)[0m  [1m[34mSELECT  "trains".* FROM "trains" WHERE "trains"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mRailwayStation Load (0.1ms)[0m  [1m[34mSELECT  "railway_stations".* FROM "railway_stations" WHERE "railway_stations"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mRailwayStation Load (0.1ms)[0m  [1m[34mSELECT  "railway_stations".* FROM "railway_stations" WHERE "railway_stations"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  Rendered tickets/show.html.erb within layouts/application (11.1ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+Completed 200 OK in 65ms (Views: 60.6ms | ActiveRecord: 1.1ms)
+
+
+Started PATCH "/tickets/2" for 127.0.0.1 at 2016-12-07 22:57:24 +0500
+Processing by TicketsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"j3WYCtJf4NlhAQvLY8Bvvk+4Ei5cecoBoTGUG4PKIEYixf7qTgKfrMxeZF9YjEZHYyGk0rwksNfL5X+GoVywcQ==", "ticket"=>{"train_id"=>"3", "start_station_id"=>"1", "end_station_id"=>"4", "pas_name"=>"1234576", "pas_pasport"=>"12312"}, "commit"=>"Update", "id"=>"2"}
+  [1m[36mTicket Load (0.4ms)[0m  [1m[34mSELECT  "tickets".* FROM "tickets" WHERE "tickets"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mTrain Load (0.1ms)[0m  [1m[34mSELECT  "trains".* FROM "trains" WHERE "trains"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mRailwayStation Load (0.1ms)[0m  [1m[34mSELECT  "railway_stations".* FROM "railway_stations" WHERE "railway_stations"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mRailwayStation Load (0.1ms)[0m  [1m[34mSELECT  "railway_stations".* FROM "railway_stations" WHERE "railway_stations"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[35mSQL (2.9ms)[0m  [1m[33mUPDATE "tickets" SET "pas_name" = ?, "pas_pasport" = ?, "updated_at" = ? WHERE "tickets"."id" = ?[0m  [["pas_name", "1234576"], ["pas_pasport", "12312"], ["updated_at", 2016-12-07 17:57:24 UTC], ["id", 2]]
+  [1m[35m (5.7ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/tickets/2
+Completed 302 Found in 31ms (ActiveRecord: 9.4ms)
+
+
+Started GET "/tickets/2" for 127.0.0.1 at 2016-12-07 22:57:24 +0500
+Processing by TicketsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mTicket Load (0.1ms)[0m  [1m[34mSELECT  "tickets".* FROM "tickets" WHERE "tickets"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering tickets/show.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mTrain Load (0.1ms)[0m  [1m[34mSELECT  "trains".* FROM "trains" WHERE "trains"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mRailwayStation Load (0.1ms)[0m  [1m[34mSELECT  "railway_stations".* FROM "railway_stations" WHERE "railway_stations"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mRailwayStation Load (0.1ms)[0m  [1m[34mSELECT  "railway_stations".* FROM "railway_stations" WHERE "railway_stations"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  Rendered tickets/show.html.erb within layouts/application (12.8ms)
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+Completed 200 OK in 81ms (Views: 79.0ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/tickets" for 127.0.0.1 at 2016-12-07 22:57:29 +0500
+Processing by TicketsController#index as HTML
+  [1m[36mUser Load (3.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering tickets/index.html.erb within layouts/application
+  [1m[36mTicket Load (0.1ms)[0m  [1m[34mSELECT "tickets".* FROM "tickets"[0m
+  [1m[36mTrain Load (0.1ms)[0m  [1m[34mSELECT  "trains".* FROM "trains" WHERE "trains"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mTrain Load (0.1ms)[0m  [1m[34mSELECT  "trains".* FROM "trains" WHERE "trains"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "trains".* FROM "trains" WHERE "trains"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  Rendered collection of tickets/_ticket.html.erb [3 times] (8.5ms)
+  Rendered tickets/index.html.erb within layouts/application (12.1ms)
+Completed 200 OK in 64ms (Views: 58.5ms | ActiveRecord: 3.7ms)
+
+
+Started GET "/tickets/4" for 127.0.0.1 at 2016-12-07 22:57:33 +0500
+Processing by TicketsController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mTicket Load (0.2ms)[0m  [1m[34mSELECT  "tickets".* FROM "tickets" WHERE "tickets"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering tickets/show.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mTrain Load (0.1ms)[0m  [1m[34mSELECT  "trains".* FROM "trains" WHERE "trains"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mRailwayStation Load (0.1ms)[0m  [1m[34mSELECT  "railway_stations".* FROM "railway_stations" WHERE "railway_stations"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mRailwayStation Load (0.0ms)[0m  [1m[34mSELECT  "railway_stations".* FROM "railway_stations" WHERE "railway_stations"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  Rendered tickets/show.html.erb within layouts/application (9.6ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+Completed 200 OK in 70ms (Views: 68.3ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/tickets/2" for 127.0.0.1 at 2016-12-07 22:57:35 +0500
+Processing by TicketsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mTicket Load (0.2ms)[0m  [1m[34mSELECT  "tickets".* FROM "tickets" WHERE "tickets"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering tickets/show.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mTrain Load (0.1ms)[0m  [1m[34mSELECT  "trains".* FROM "trains" WHERE "trains"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mRailwayStation Load (0.1ms)[0m  [1m[34mSELECT  "railway_stations".* FROM "railway_stations" WHERE "railway_stations"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mRailwayStation Load (0.0ms)[0m  [1m[34mSELECT  "railway_stations".* FROM "railway_stations" WHERE "railway_stations"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  Rendered tickets/show.html.erb within layouts/application (10.0ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+Completed 200 OK in 63ms (Views: 61.0ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/tickets/4" for 127.0.0.1 at 2016-12-07 22:57:37 +0500
+Processing by TicketsController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mTicket Load (0.1ms)[0m  [1m[34mSELECT  "tickets".* FROM "tickets" WHERE "tickets"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering tickets/show.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mTrain Load (0.1ms)[0m  [1m[34mSELECT  "trains".* FROM "trains" WHERE "trains"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mRailwayStation Load (0.1ms)[0m  [1m[34mSELECT  "railway_stations".* FROM "railway_stations" WHERE "railway_stations"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mRailwayStation Load (0.1ms)[0m  [1m[34mSELECT  "railway_stations".* FROM "railway_stations" WHERE "railway_stations"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  Rendered tickets/show.html.erb within layouts/application (9.4ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+Completed 200 OK in 69ms (Views: 64.9ms | ActiveRecord: 0.7ms)
+
+
+Started DELETE "/users/sign_out" for 127.0.0.1 at 2016-12-07 22:57:40 +0500
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"4723Qc8jVfgV6MSHvtGXg5c4AYaQEhIBrxPlj9IkEmBODdGhU34qjbi3qxOFnb56u6G3enBPaNfFxw4S8LKCVw=="}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 34ms (ActiveRecord: 0.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2016-12-07 22:57:40 +0500
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 83ms (Views: 82.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2016-12-07 22:57:43 +0500
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (1.1ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (15.6ms)
+Completed 200 OK in 68ms (Views: 65.9ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/sign_in" for 127.0.0.1 at 2016-12-07 22:57:46 +0500
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"LH71nPlTVqYqXFziJ28/XBT6YbhtMOg2qi3/+TZuneHQFFX12ey3JSD2jo+gzH7TLpDzWi1TzMx5q+u89kCqmw==", "user"=>{"email"=>"n@n.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[36mUser Load (2.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["email", "n@n.com"], ["LIMIT", 1]]
+Redirected to http://localhost:3000/
+Completed 302 Found in 323ms (ActiveRecord: 2.8ms)
+
+
+Started GET "/" for 127.0.0.1 at 2016-12-07 22:57:46 +0500
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (5.1ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+Completed 200 OK in 61ms (Views: 53.8ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/search" for 127.0.0.1 at 2016-12-07 22:57:50 +0500
+Processing by SearchesController#show as HTML
+  Rendering searches/show.html.erb within layouts/application
+  [1m[36mRailwayStation Load (0.2ms)[0m  [1m[34mSELECT "railway_stations".* FROM "railway_stations"[0m
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT "railway_stations".* FROM "railway_stations"[0m
+  Rendered searches/show.html.erb within layouts/application (5.7ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+Completed 200 OK in 61ms (Views: 58.8ms | ActiveRecord: 0.4ms)
+
+
+Started POST "/search" for 127.0.0.1 at 2016-12-07 22:57:52 +0500
+Processing by SearchesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"G3FFsXNHDyDZ2R0a23zBOEHmXR11UAEQl9i75Z8kEuaJ+NHoVyMku7tCU7Qg6ACcHf3NzB8fcyNm8hvXeGRD+Q==", "search"=>{"start_station_id"=>"1", "end_station_id"=>"4"}, "commit"=>"Search"}
+  [1m[35mSQL (0.2ms)[0m  [1m[34mSELECT "trains"."id" AS t0_r0, "trains"."number" AS t0_r1, "trains"."created_at" AS t0_r2, "trains"."updated_at" AS t0_r3, "trains"."current_station_id" AS t0_r4, "trains"."route_id" AS t0_r5, "trains"."ordering" AS t0_r6, "routes"."id" AS t1_r0, "routes"."name" AS t1_r1, "routes"."created_at" AS t1_r2, "routes"."updated_at" AS t1_r3, "railway_stations"."id" AS t2_r0, "railway_stations"."title" AS t2_r1, "railway_stations"."created_at" AS t2_r2, "railway_stations"."updated_at" AS t2_r3 FROM "trains" LEFT OUTER JOIN "routes" ON "routes"."id" = "trains"."route_id" LEFT OUTER JOIN "railway_stations_routes" ON "railway_stations_routes"."route_id" = "routes"."id" LEFT OUTER JOIN "railway_stations" ON "railway_stations"."id" = "railway_stations_routes"."railway_station_id" WHERE "railway_stations"."id" = ?[0m  [["id", "1"]]
+  [1m[35mSQL (0.3ms)[0m  [1m[34mSELECT "trains"."id" AS t0_r0, "trains"."number" AS t0_r1, "trains"."created_at" AS t0_r2, "trains"."updated_at" AS t0_r3, "trains"."current_station_id" AS t0_r4, "trains"."route_id" AS t0_r5, "trains"."ordering" AS t0_r6, "routes"."id" AS t1_r0, "routes"."name" AS t1_r1, "routes"."created_at" AS t1_r2, "routes"."updated_at" AS t1_r3, "railway_stations"."id" AS t2_r0, "railway_stations"."title" AS t2_r1, "railway_stations"."created_at" AS t2_r2, "railway_stations"."updated_at" AS t2_r3 FROM "trains" LEFT OUTER JOIN "routes" ON "routes"."id" = "trains"."route_id" LEFT OUTER JOIN "railway_stations_routes" ON "railway_stations_routes"."route_id" = "routes"."id" LEFT OUTER JOIN "railway_stations" ON "railway_stations"."id" = "railway_stations_routes"."railway_station_id" WHERE "railway_stations"."id" = ?[0m  [["id", "4"]]
+  Rendering searches/show.html.erb within layouts/application
+  [1m[36mRailwayStation Load (2.6ms)[0m  [1m[34mSELECT "railway_stations".* FROM "railway_stations"[0m
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT "railway_stations".* FROM "railway_stations"[0m
+  [1m[36mRailwayStation Load (0.1ms)[0m  [1m[34mSELECT  "railway_stations".* FROM "railway_stations" WHERE "railway_stations"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mRailwayStationsRoute Load (0.2ms)[0m  [1m[34mSELECT  "railway_stations_routes".* FROM "railway_stations_routes" WHERE "railway_stations_routes"."railway_station_id" = ? AND "railway_stations_routes"."route_id" = 2 ORDER BY "railway_stations_routes"."id" ASC LIMIT ?[0m  [["railway_station_id", 1], ["LIMIT", 1]]
+  [1m[36mRailwayStation Load (0.1ms)[0m  [1m[34mSELECT  "railway_stations".* FROM "railway_stations" WHERE "railway_stations"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mRailwayStationsRoute Load (0.2ms)[0m  [1m[34mSELECT  "railway_stations_routes".* FROM "railway_stations_routes" WHERE "railway_stations_routes"."railway_station_id" = ? AND "railway_stations_routes"."route_id" = 2 ORDER BY "railway_stations_routes"."id" ASC LIMIT ?[0m  [["railway_station_id", 4], ["LIMIT", 1]]
+  Rendered searches/show.html.erb within layouts/application (67.6ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+Completed 200 OK in 167ms (Views: 124.2ms | ActiveRecord: 4.9ms)
+
+
+Started GET "/tickets/new?utf8=%E2%9C%93&train_id=4&start_station_id=1&end_station_id=4&commit=Buy+ticket" for 127.0.0.1 at 2016-12-07 22:57:54 +0500
+Processing by TicketsController#new as HTML
+  Parameters: {"utf8"=>"✓", "train_id"=>"4", "start_station_id"=>"1", "end_station_id"=>"4", "commit"=>"Buy ticket"}
+  [1m[36mTrain Load (0.1ms)[0m  [1m[34mSELECT  "trains".* FROM "trains" WHERE "trains"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mRailwayStation Load (0.0ms)[0m  [1m[34mSELECT  "railway_stations".* FROM "railway_stations" WHERE "railway_stations"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mRailwayStation Load (0.0ms)[0m  [1m[34mSELECT  "railway_stations".* FROM "railway_stations" WHERE "railway_stations"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering tickets/new.html.erb within layouts/application
+  Rendered common/_errors.html.erb (0.4ms)
+  Rendered tickets/_form.html.erb (3.2ms)
+  Rendered tickets/new.html.erb within layouts/application (6.8ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+Completed 200 OK in 71ms (Views: 62.9ms | ActiveRecord: 0.4ms)
+
+
+Started POST "/tickets" for 127.0.0.1 at 2016-12-07 22:57:59 +0500
+Processing by TicketsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"oNY0jSjpXji/IILhzuJbijof8NtLyBfNys/KVukK/pQyX6DUDI11o927zE81dpouZgRgCiGHZf475WpkDkqviw==", "ticket"=>{"train_id"=>"4", "start_station_id"=>"1", "end_station_id"=>"4", "pas_name"=>"petr", "pas_pasport"=>"135"}, "commit"=>"Buy ticket"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mTrain Load (0.1ms)[0m  [1m[34mSELECT  "trains".* FROM "trains" WHERE "trains"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mRailwayStation Load (0.0ms)[0m  [1m[34mSELECT  "railway_stations".* FROM "railway_stations" WHERE "railway_stations"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mRailwayStation Load (0.0ms)[0m  [1m[34mSELECT  "railway_stations".* FROM "railway_stations" WHERE "railway_stations"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[35mSQL (8.0ms)[0m  [1m[32mINSERT INTO "tickets" ("created_at", "updated_at", "user_id", "train_id", "start_station_id", "end_station_id", "pas_name", "pas_pasport") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["created_at", 2016-12-07 17:57:59 UTC], ["updated_at", 2016-12-07 17:57:59 UTC], ["user_id", 5], ["train_id", 4], ["start_station_id", 1], ["end_station_id", 4], ["pas_name", "petr"], ["pas_pasport", "135"]]
+  [1m[35m (6.4ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/tickets/5
+Completed 302 Found in 34ms (ActiveRecord: 14.8ms)
+
+
+Started GET "/tickets/5" for 127.0.0.1 at 2016-12-07 22:57:59 +0500
+Processing by TicketsController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mTicket Load (0.1ms)[0m  [1m[34mSELECT  "tickets".* FROM "tickets" WHERE "tickets"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  Rendering tickets/show.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[36mTrain Load (0.1ms)[0m  [1m[34mSELECT  "trains".* FROM "trains" WHERE "trains"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mRailwayStation Load (0.1ms)[0m  [1m[34mSELECT  "railway_stations".* FROM "railway_stations" WHERE "railway_stations"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mRailwayStation Load (0.1ms)[0m  [1m[34mSELECT  "railway_stations".* FROM "railway_stations" WHERE "railway_stations"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  Rendered tickets/show.html.erb within layouts/application (21.1ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+Completed 200 OK in 86ms (Views: 83.9ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/tickets" for 127.0.0.1 at 2016-12-07 22:58:04 +0500
+Processing by TicketsController#index as HTML
+  [1m[36mUser Load (2.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  Rendering tickets/index.html.erb within layouts/application
+  [1m[36mTicket Load (0.2ms)[0m  [1m[34mSELECT "tickets".* FROM "tickets" WHERE "tickets"."user_id" = ?[0m  [["user_id", 5]]
+  [1m[36mTrain Load (0.1ms)[0m  [1m[34mSELECT  "trains".* FROM "trains" WHERE "trains"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  Rendered collection of tickets/_ticket.html.erb [1 times] (2.0ms)
+  Rendered tickets/index.html.erb within layouts/application (10.6ms)
+Completed 200 OK in 73ms (Views: 65.6ms | ActiveRecord: 2.5ms)
+
+
+Started GET "/tickets/5" for 127.0.0.1 at 2016-12-07 22:58:11 +0500
+Processing by TicketsController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mTicket Load (0.2ms)[0m  [1m[34mSELECT  "tickets".* FROM "tickets" WHERE "tickets"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  Rendering tickets/show.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[36mTrain Load (0.1ms)[0m  [1m[34mSELECT  "trains".* FROM "trains" WHERE "trains"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mRailwayStation Load (0.1ms)[0m  [1m[34mSELECT  "railway_stations".* FROM "railway_stations" WHERE "railway_stations"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mRailwayStation Load (0.0ms)[0m  [1m[34mSELECT  "railway_stations".* FROM "railway_stations" WHERE "railway_stations"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  Rendered tickets/show.html.erb within layouts/application (12.2ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+Completed 200 OK in 76ms (Views: 73.3ms | ActiveRecord: 0.7ms)
+
+
+Started DELETE "/users/sign_out" for 127.0.0.1 at 2016-12-07 22:58:13 +0500
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"v+Tal2wgmJCygKoaWNOgS0UD1uYAEe2jLcD7FUweeZktbU7OSESzC9Ab5LSjR2HvGRhGN2pen5Dc6lsnq14ohg=="}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 9ms (ActiveRecord: 0.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2016-12-07 22:58:13 +0500
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 59ms (Views: 57.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2016-12-07 22:58:14 +0500
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (5.0ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (12.4ms)
+Completed 200 OK in 72ms (Views: 71.4ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/sign_in" for 127.0.0.1 at 2016-12-07 22:58:17 +0500
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"+I66UKNBhLB7wnvdJBs+P4FaRUcPNVqDuN0M5F5/SRoVmHBkjQVlmvu5TdgsRr5ZBwqT5MrPqg3LPuFmLQErOg==", "user"=>{"email"=>"admin@admin.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[36mUser Load (2.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["email", "admin@admin.com"], ["LIMIT", 1]]
+Redirected to http://localhost:3000/
+Completed 302 Found in 312ms (ActiveRecord: 2.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2016-12-07 22:58:17 +0500
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (0.5ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+Completed 200 OK in 52ms (Views: 51.1ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/tickets" for 127.0.0.1 at 2016-12-07 22:58:23 +0500
+Processing by TicketsController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering tickets/index.html.erb within layouts/application
+  [1m[36mTicket Load (0.1ms)[0m  [1m[34mSELECT "tickets".* FROM "tickets"[0m
+  [1m[36mTrain Load (0.1ms)[0m  [1m[34mSELECT  "trains".* FROM "trains" WHERE "trains"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mTrain Load (0.1ms)[0m  [1m[34mSELECT  "trains".* FROM "trains" WHERE "trains"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "trains".* FROM "trains" WHERE "trains"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mTrain Load (0.1ms)[0m  [1m[34mSELECT  "trains".* FROM "trains" WHERE "trains"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  Rendered collection of tickets/_ticket.html.erb [4 times] (8.0ms)
+  Rendered tickets/index.html.erb within layouts/application (13.8ms)
+Completed 200 OK in 73ms (Views: 68.5ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/tickets/5" for 127.0.0.1 at 2016-12-07 22:58:26 +0500
+Processing by TicketsController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mTicket Load (0.1ms)[0m  [1m[34mSELECT  "tickets".* FROM "tickets" WHERE "tickets"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  Rendering tickets/show.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[36mTrain Load (0.1ms)[0m  [1m[34mSELECT  "trains".* FROM "trains" WHERE "trains"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mRailwayStation Load (0.1ms)[0m  [1m[34mSELECT  "railway_stations".* FROM "railway_stations" WHERE "railway_stations"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mRailwayStation Load (0.0ms)[0m  [1m[34mSELECT  "railway_stations".* FROM "railway_stations" WHERE "railway_stations"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  Rendered tickets/show.html.erb within layouts/application (12.1ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+Completed 200 OK in 70ms (Views: 66.5ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/tickets/5/edit" for 127.0.0.1 at 2016-12-07 22:58:27 +0500
+Processing by TicketsController#edit as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mTicket Load (0.1ms)[0m  [1m[34mSELECT  "tickets".* FROM "tickets" WHERE "tickets"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  Rendering tickets/edit.html.erb within layouts/application
+  Rendered common/_errors.html.erb (0.4ms)
+  Rendered tickets/_form.html.erb (2.3ms)
+  Rendered tickets/edit.html.erb within layouts/application (6.2ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+Completed 200 OK in 76ms (Views: 73.3ms | ActiveRecord: 0.3ms)
+
+
+Started PATCH "/tickets/5" for 127.0.0.1 at 2016-12-07 22:58:31 +0500
+Processing by TicketsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"vVaQjaU0RMD+aAHT81UyOPd9xOnUEmvpNqxVW97JRpgta3OmSmhvTeszgLbfEZbQ1rgLl45SEcKxVxQOuaV8Lw==", "ticket"=>{"train_id"=>"4", "start_station_id"=>"1", "end_station_id"=>"4", "pas_name"=>"ahahahaha", "pas_pasport"=>"135"}, "commit"=>"Update", "id"=>"5"}
+  [1m[36mTicket Load (0.1ms)[0m  [1m[34mSELECT  "tickets".* FROM "tickets" WHERE "tickets"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[36mTrain Load (0.0ms)[0m  [1m[34mSELECT  "trains".* FROM "trains" WHERE "trains"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mRailwayStation Load (0.0ms)[0m  [1m[34mSELECT  "railway_stations".* FROM "railway_stations" WHERE "railway_stations"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mRailwayStation Load (0.0ms)[0m  [1m[34mSELECT  "railway_stations".* FROM "railway_stations" WHERE "railway_stations"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[35mSQL (3.7ms)[0m  [1m[33mUPDATE "tickets" SET "pas_name" = ?, "updated_at" = ? WHERE "tickets"."id" = ?[0m  [["pas_name", "ahahahaha"], ["updated_at", 2016-12-07 17:58:31 UTC], ["id", 5]]
+  [1m[35m (26.6ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/tickets/5
+Completed 302 Found in 48ms (ActiveRecord: 30.7ms)
+
+
+Started GET "/tickets/5" for 127.0.0.1 at 2016-12-07 22:58:31 +0500
+Processing by TicketsController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mTicket Load (0.1ms)[0m  [1m[34mSELECT  "tickets".* FROM "tickets" WHERE "tickets"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  Rendering tickets/show.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[36mTrain Load (2.1ms)[0m  [1m[34mSELECT  "trains".* FROM "trains" WHERE "trains"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mRailwayStation Load (0.1ms)[0m  [1m[34mSELECT  "railway_stations".* FROM "railway_stations" WHERE "railway_stations"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mRailwayStation Load (0.1ms)[0m  [1m[34mSELECT  "railway_stations".* FROM "railway_stations" WHERE "railway_stations"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  Rendered tickets/show.html.erb within layouts/application (11.4ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+Completed 200 OK in 79ms (Views: 74.6ms | ActiveRecord: 2.6ms)
+
+
+Started DELETE "/users/sign_out" for 127.0.0.1 at 2016-12-07 22:58:36 +0500
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"zAFqDqlyWezARC1h0SAHu0bh9L+rJTZsemaqN5oDB2rkzY2m+h5lWSg2nao9L8DSw4rA9U454PuX93lQGRoYGA=="}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[35m (3.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 8ms (ActiveRecord: 3.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2016-12-07 22:58:36 +0500
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 57ms (Views: 56.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2016-12-07 22:58:39 +0500
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (0.8ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (7.9ms)
+Completed 200 OK in 56ms (Views: 54.7ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/sign_in" for 127.0.0.1 at 2016-12-07 22:58:41 +0500
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"e2CcuHHcowodsGsVTx8WVwqGtDrlinQ8RlJCFFE1qVJT45ejHPcVws/e+JWfRm28aq2FepL8v3ymvTy3Gpym6w==", "user"=>{"email"=>"n@n.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["email", "n@n.com"], ["LIMIT", 1]]
+Redirected to http://localhost:3000/
+Completed 302 Found in 322ms (ActiveRecord: 0.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2016-12-07 22:58:41 +0500
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (0.4ms)
+  [1m[36mUser Load (1.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+Completed 200 OK in 67ms (Views: 64.4ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/tickets" for 127.0.0.1 at 2016-12-07 22:58:45 +0500
+Processing by TicketsController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  Rendering tickets/index.html.erb within layouts/application
+  [1m[36mTicket Load (0.2ms)[0m  [1m[34mSELECT "tickets".* FROM "tickets" WHERE "tickets"."user_id" = ?[0m  [["user_id", 5]]
+  [1m[36mTrain Load (0.1ms)[0m  [1m[34mSELECT  "trains".* FROM "trains" WHERE "trains"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  Rendered collection of tickets/_ticket.html.erb [1 times] (4.2ms)
+  Rendered tickets/index.html.erb within layouts/application (8.4ms)
+Completed 200 OK in 60ms (Views: 54.1ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/tickets/5" for 127.0.0.1 at 2016-12-07 22:58:47 +0500
+Processing by TicketsController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mTicket Load (0.1ms)[0m  [1m[34mSELECT  "tickets".* FROM "tickets" WHERE "tickets"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  Rendering tickets/show.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[36mTrain Load (0.1ms)[0m  [1m[34mSELECT  "trains".* FROM "trains" WHERE "trains"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mRailwayStation Load (0.1ms)[0m  [1m[34mSELECT  "railway_stations".* FROM "railway_stations" WHERE "railway_stations"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mRailwayStation Load (0.0ms)[0m  [1m[34mSELECT  "railway_stations".* FROM "railway_stations" WHERE "railway_stations"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  Rendered tickets/show.html.erb within layouts/application (6.2ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+Completed 200 OK in 59ms (Views: 55.9ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/tickets/5" for 127.0.0.1 at 2016-12-07 22:59:25 +0500
+Processing by TicketsController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mTicket Load (0.1ms)[0m  [1m[34mSELECT  "tickets".* FROM "tickets" WHERE "tickets"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  Rendering tickets/show.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[36mTrain Load (0.1ms)[0m  [1m[34mSELECT  "trains".* FROM "trains" WHERE "trains"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mRailwayStation Load (0.1ms)[0m  [1m[34mSELECT  "railway_stations".* FROM "railway_stations" WHERE "railway_stations"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mRailwayStation Load (0.1ms)[0m  [1m[34mSELECT  "railway_stations".* FROM "railway_stations" WHERE "railway_stations"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  Rendered tickets/show.html.erb within layouts/application (14.8ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+Completed 200 OK in 87ms (Views: 84.9ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/tickets" for 127.0.0.1 at 2016-12-07 22:59:26 +0500
+Processing by TicketsController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  Rendering tickets/index.html.erb within layouts/application
+  [1m[36mTicket Load (0.2ms)[0m  [1m[34mSELECT "tickets".* FROM "tickets" WHERE "tickets"."user_id" = ?[0m  [["user_id", 5]]
+  [1m[36mTrain Load (0.1ms)[0m  [1m[34mSELECT  "trains".* FROM "trains" WHERE "trains"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  Rendered collection of tickets/_ticket.html.erb [1 times] (4.9ms)
+  Rendered tickets/index.html.erb within layouts/application (6.7ms)
+Completed 200 OK in 65ms (Views: 62.7ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/tickets" for 127.0.0.1 at 2016-12-07 23:00:39 +0500
+Processing by TicketsController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  Rendering tickets/index.html.erb within layouts/application
+  [1m[36mTicket Load (0.2ms)[0m  [1m[34mSELECT "tickets".* FROM "tickets" WHERE "tickets"."user_id" = ?[0m  [["user_id", 5]]
+  [1m[36mTrain Load (0.1ms)[0m  [1m[34mSELECT  "trains".* FROM "trains" WHERE "trains"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  Rendered collection of tickets/_ticket.html.erb [1 times] (33.2ms)
+  Rendered tickets/index.html.erb within layouts/application (67.3ms)
+Completed 200 OK in 167ms (Views: 122.4ms | ActiveRecord: 2.3ms)
+
+
+Started GET "/tickets/5" for 127.0.0.1 at 2016-12-07 23:00:41 +0500
+Processing by TicketsController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mTicket Load (0.4ms)[0m  [1m[34mSELECT  "tickets".* FROM "tickets" WHERE "tickets"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  Rendering tickets/show.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[36mTrain Load (0.1ms)[0m  [1m[34mSELECT  "trains".* FROM "trains" WHERE "trains"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mRailwayStation Load (0.1ms)[0m  [1m[34mSELECT  "railway_stations".* FROM "railway_stations" WHERE "railway_stations"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mRailwayStation Load (0.1ms)[0m  [1m[34mSELECT  "railway_stations".* FROM "railway_stations" WHERE "railway_stations"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  Rendered tickets/show.html.erb within layouts/application (44.5ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+Completed 200 OK in 118ms (Views: 113.1ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/tickets" for 127.0.0.1 at 2016-12-07 23:00:45 +0500
+Processing by TicketsController#index as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  Rendering tickets/index.html.erb within layouts/application
+  [1m[36mTicket Load (0.2ms)[0m  [1m[34mSELECT "tickets".* FROM "tickets" WHERE "tickets"."user_id" = ?[0m  [["user_id", 5]]
+  [1m[36mTrain Load (0.2ms)[0m  [1m[34mSELECT  "trains".* FROM "trains" WHERE "trains"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  Rendered collection of tickets/_ticket.html.erb [1 times] (7.2ms)
+  Rendered tickets/index.html.erb within layouts/application (19.6ms)
+Completed 200 OK in 81ms (Views: 77.1ms | ActiveRecord: 0.8ms)
+
+
