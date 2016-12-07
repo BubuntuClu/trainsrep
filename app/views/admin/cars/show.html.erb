@@ -30,5 +30,5 @@
     <%= @car.seat_space %>
 </p>
 
-<%= link_to 'Edit', edit_car_path(@car) %> |
-<%= link_to 'Back', @car.train %>
+<%= link_to 'Edit', edit_admin_car_path(@car) %> |
+<%= link_to 'Back', [:admin, @car.train] %>

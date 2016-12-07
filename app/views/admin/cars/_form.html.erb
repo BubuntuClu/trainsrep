@@ -1,5 +1,5 @@
 
-<%= form_for [@train, car] do |f| %>
+<%= form_for [:admin, @train, car] do |f| %>
   <%= render 'common/errors', resource: car %>
 
 

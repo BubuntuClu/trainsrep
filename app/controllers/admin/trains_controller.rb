@@ -34,7 +34,7 @@ class Admin::TrainsController < Admin::BaseController
 
   def destroy
     @train.destroy
-    redirect_to trains_url, notice: 'Train was successfully destroyed.'
+    redirect_to admin_trains_url, notice: 'Train was successfully destroyed.'
   end
 
   private

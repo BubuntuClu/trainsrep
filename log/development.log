@@ -20257,3 +20257,571 @@ Processing by Admin::TrainsController#show as HTML
 Completed 200 OK in 84ms (Views: 78.4ms | ActiveRecord: 0.6ms)
 
 
+Started GET "/admin/trains/5/cars/new" for 127.0.0.1 at 2016-12-07 22:03:05 +0500
+Processing by Admin::CarsController#new as HTML
+  Parameters: {"train_id"=>"5"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mTrain Load (0.1ms)[0m  [1m[34mSELECT  "trains".* FROM "trains" WHERE "trains"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "trains".* FROM "trains" WHERE "trains"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  Rendering admin/cars/new.html.erb within layouts/admin
+  Rendered admin/cars/_form.html.erb (180.7ms)
+  Rendered admin/cars/new.html.erb within layouts/admin (183.0ms)
+Completed 500 Internal Server Error in 192ms (ActiveRecord: 0.3ms)
+
+
+  
+ActionView::Template::Error (undefined method `train_cars_path' for #<#<Class:0x007f18b54faab8>:0x007f18b4e3bc40>
+Did you mean?  admin_car_path):
+    1: 
+    2: <%= form_for [@train, car] do |f| %>
+    3:   <%= render 'common/errors', resource: car %>
+    4: 
+    5: 
+  
+app/views/admin/cars/_form.html.erb:2:in `_app_views_admin_cars__form_html_erb___4593340613851814704_69872045348340'
+app/views/admin/cars/new.html.erb:3:in `_app_views_admin_cars_new_html_erb__2031605712035186428_69872045384960'
+  Rendering /home/clu/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering /home/clu/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /home/clu/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (7.4ms)
+  Rendering /home/clu/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /home/clu/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.4ms)
+  Rendering /home/clu/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /home/clu/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.9ms)
+  Rendered /home/clu/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (44.5ms)
+Started GET "/admin/trains/5/cars/new" for 127.0.0.1 at 2016-12-07 22:03:23 +0500
+Processing by Admin::CarsController#new as HTML
+  Parameters: {"train_id"=>"5"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mTrain Load (0.1ms)[0m  [1m[34mSELECT  "trains".* FROM "trains" WHERE "trains"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "trains".* FROM "trains" WHERE "trains"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  Rendering admin/cars/new.html.erb within layouts/admin
+  Rendered admin/cars/_form.html.erb (18.0ms)
+  Rendered admin/cars/new.html.erb within layouts/admin (20.8ms)
+Completed 500 Internal Server Error in 36ms (ActiveRecord: 0.4ms)
+
+
+  
+ActionView::Template::Error (undefined method `model_name' for #<Array:0x007f18b80b26b0>):
+    1: 
+    2: <%= form_for [:admin, [@train, car]] do |f| %>
+    3:   <%= render 'common/errors', resource: car %>
+    4: 
+    5: 
+  
+app/views/admin/cars/_form.html.erb:2:in `_app_views_admin_cars__form_html_erb___4593340613851814704_69871986157800'
+app/views/admin/cars/new.html.erb:3:in `_app_views_admin_cars_new_html_erb__2031605712035186428_69872072100300'
+  Rendering /home/clu/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering /home/clu/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /home/clu/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (13.0ms)
+  Rendering /home/clu/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /home/clu/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.3ms)
+  Rendering /home/clu/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /home/clu/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.9ms)
+  Rendered /home/clu/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (56.7ms)
+Started GET "/admin/trains/5/cars/new" for 127.0.0.1 at 2016-12-07 22:03:49 +0500
+Processing by Admin::CarsController#new as HTML
+  Parameters: {"train_id"=>"5"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mTrain Load (0.1ms)[0m  [1m[34mSELECT  "trains".* FROM "trains" WHERE "trains"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "trains".* FROM "trains" WHERE "trains"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  Rendering admin/cars/new.html.erb within layouts/admin
+  Rendered common/_errors.html.erb (0.5ms)
+  Rendered admin/cars/_form.html.erb (24.8ms)
+  Rendered admin/cars/new.html.erb within layouts/admin (309.6ms)
+Completed 500 Internal Server Error in 325ms (ActiveRecord: 0.3ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `train_cars_path' for #<#<Class:0x007f18b54faab8>:0x007f18c022ec70>
+Did you mean?  admin_car_path):
+    2: 
+    3: <%= render 'form', car: @car %>
+    4: 
+    5: <%= link_to 'Back', train_cars_path %>
+  
+app/views/admin/cars/new.html.erb:5:in `_app_views_admin_cars_new_html_erb__2031605712035186428_69872139729920'
+  Rendering /home/clu/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering /home/clu/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /home/clu/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (15.9ms)
+  Rendering /home/clu/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /home/clu/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.7ms)
+  Rendering /home/clu/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /home/clu/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.9ms)
+  Rendered /home/clu/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (49.5ms)
+Started GET "/admin/trains/5/cars/new" for 127.0.0.1 at 2016-12-07 22:05:34 +0500
+Processing by Admin::CarsController#new as HTML
+  Parameters: {"train_id"=>"5"}
+  [1m[36mUser Load (1.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mTrain Load (0.1ms)[0m  [1m[34mSELECT  "trains".* FROM "trains" WHERE "trains"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "trains".* FROM "trains" WHERE "trains"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  Rendering admin/cars/new.html.erb within layouts/admin
+  Rendered common/_errors.html.erb (1.4ms)
+  Rendered admin/cars/_form.html.erb (7.6ms)
+  Rendered admin/cars/new.html.erb within layouts/admin (10.6ms)
+Completed 200 OK in 71ms (Views: 64.4ms | ActiveRecord: 1.6ms)
+
+
+Started POST "/admin/trains/5/cars" for 127.0.0.1 at 2016-12-07 22:05:46 +0500
+Processing by Admin::CarsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"M+J0dpLgPh2MKo8QjRaZ1n24/KvM+VBrS4dRaqHGBhDG59kPFP03EWGTVqIUaeqe5bibbhqQCwht09V+O3QV5A==", "car"=>{"car_type"=>"seat", "up_space"=>"123", "low_space"=>"123", "side_up_space"=>"123", "side_low_space"=>"123", "seat_space"=>"123"}, "commit"=>"Create", "train_id"=>"5"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mTrain Load (0.2ms)[0m  [1m[34mSELECT  "trains".* FROM "trains" WHERE "trains"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT MAX("cars"."number") FROM "cars" WHERE "cars"."train_id" = 5[0m
+  [1m[36mCar Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "cars" WHERE "cars"."number" = ? AND "cars"."train_id" = ? LIMIT ?[0m  [["number", 1], ["train_id", 5], ["LIMIT", 1]]
+  [1m[35mSQL (1.5ms)[0m  [1m[32mINSERT INTO "cars" ("car_type", "up_space", "low_space", "created_at", "updated_at", "train_id", "number", "side_up_space", "side_low_space", "seat_space") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["car_type", "seat"], ["up_space", 123], ["low_space", 123], ["created_at", 2016-12-07 17:05:46 UTC], ["updated_at", 2016-12-07 17:05:46 UTC], ["train_id", 5], ["number", 1], ["side_up_space", 123], ["side_low_space", 123], ["seat_space", 123]]
+  [1m[35m (4.5ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/admin/trains/5
+Completed 302 Found in 32ms (ActiveRecord: 6.6ms)
+
+
+Started GET "/admin/trains/5" for 127.0.0.1 at 2016-12-07 22:05:46 +0500
+Processing by Admin::TrainsController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mTrain Load (0.1ms)[0m  [1m[34mSELECT  "trains".* FROM "trains" WHERE "trains"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  Rendering admin/trains/show.html.erb within layouts/admin
+  [1m[36mRailwayStation Load (0.1ms)[0m  [1m[34mSELECT  "railway_stations".* FROM "railway_stations" WHERE "railway_stations"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[36mRoute Load (0.1ms)[0m  [1m[34mSELECT  "routes".* FROM "routes" WHERE "routes"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  [1m[36mCar Load (0.1ms)[0m  [1m[34mSELECT "cars".* FROM "cars" WHERE "cars"."train_id" = ?[0m  [["train_id", 5]]
+  [1m[36mCar Load (0.2ms)[0m  [1m[34mSELECT "cars".* FROM "cars" WHERE "cars"."train_id" = ? ORDER BY number DESC[0m  [["train_id", 5]]
+  Rendered admin/trains/show.html.erb within layouts/admin (15.3ms)
+Completed 200 OK in 84ms (Views: 75.4ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/admin/cars/19" for 127.0.0.1 at 2016-12-07 22:05:50 +0500
+Processing by Admin::CarsController#show as HTML
+  Parameters: {"id"=>"19"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mCar Load (0.1ms)[0m  [1m[34mSELECT  "cars".* FROM "cars" WHERE "cars"."id" = ? LIMIT ?[0m  [["id", 19], ["LIMIT", 1]]
+  Rendering admin/cars/seat_car.html.erb within layouts/admin
+  [1m[36mTrain Load (0.1ms)[0m  [1m[34mSELECT  "trains".* FROM "trains" WHERE "trains"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  Rendered admin/cars/seat_car.html.erb within layouts/admin (4.9ms)
+Completed 200 OK in 60ms (Views: 55.1ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/admin/trains/5/cars/new" for 127.0.0.1 at 2016-12-07 22:05:52 +0500
+Processing by Admin::CarsController#new as HTML
+  Parameters: {"train_id"=>"5"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mTrain Load (0.1ms)[0m  [1m[34mSELECT  "trains".* FROM "trains" WHERE "trains"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "trains".* FROM "trains" WHERE "trains"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  Rendering admin/cars/new.html.erb within layouts/admin
+  Rendered common/_errors.html.erb (0.4ms)
+  Rendered admin/cars/_form.html.erb (6.4ms)
+  Rendered admin/cars/new.html.erb within layouts/admin (11.9ms)
+Completed 200 OK in 70ms (Views: 62.0ms | ActiveRecord: 0.2ms)
+
+
+Started POST "/admin/trains/5/cars" for 127.0.0.1 at 2016-12-07 22:05:59 +0500
+Processing by Admin::CarsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"6CNjLT/ONtM+nze7Gczd6ICl/SaZah3j+x4LZCDHaMJuJBFkTFzOiUSgwRrNj5WnVJ6MuZZE32mu84F4noeMpQ==", "car"=>{"car_type"=>"sv", "up_space"=>"231", "low_space"=>"231", "side_up_space"=>"231", "side_low_space"=>"231", "seat_space"=>"231"}, "commit"=>"Create", "train_id"=>"5"}
+  [1m[36mUser Load (2.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mTrain Load (0.1ms)[0m  [1m[34mSELECT  "trains".* FROM "trains" WHERE "trains"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT MAX("cars"."number") FROM "cars" WHERE "cars"."train_id" = 5[0m
+  [1m[36mCar Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "cars" WHERE "cars"."number" = ? AND "cars"."train_id" = ? LIMIT ?[0m  [["number", 2], ["train_id", 5], ["LIMIT", 1]]
+  [1m[35mSQL (3.7ms)[0m  [1m[32mINSERT INTO "cars" ("car_type", "up_space", "low_space", "created_at", "updated_at", "train_id", "number", "side_up_space", "side_low_space", "seat_space") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["car_type", "sv"], ["up_space", 231], ["low_space", 231], ["created_at", 2016-12-07 17:05:59 UTC], ["updated_at", 2016-12-07 17:05:59 UTC], ["train_id", 5], ["number", 2], ["side_up_space", 231], ["side_low_space", 231], ["seat_space", 231]]
+  [1m[35m (9.0ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/admin/trains/5
+Completed 302 Found in 28ms (ActiveRecord: 15.4ms)
+
+
+Started GET "/admin/trains/5" for 127.0.0.1 at 2016-12-07 22:06:00 +0500
+Processing by Admin::TrainsController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mTrain Load (0.1ms)[0m  [1m[34mSELECT  "trains".* FROM "trains" WHERE "trains"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  Rendering admin/trains/show.html.erb within layouts/admin
+  [1m[36mRailwayStation Load (0.2ms)[0m  [1m[34mSELECT  "railway_stations".* FROM "railway_stations" WHERE "railway_stations"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[36mRoute Load (4.7ms)[0m  [1m[34mSELECT  "routes".* FROM "routes" WHERE "routes"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  [1m[36mCar Load (0.1ms)[0m  [1m[34mSELECT "cars".* FROM "cars" WHERE "cars"."train_id" = ?[0m  [["train_id", 5]]
+  [1m[36mCar Load (0.2ms)[0m  [1m[34mSELECT "cars".* FROM "cars" WHERE "cars"."train_id" = ? ORDER BY number DESC[0m  [["train_id", 5]]
+  Rendered admin/trains/show.html.erb within layouts/admin (17.0ms)
+Completed 200 OK in 89ms (Views: 81.4ms | ActiveRecord: 5.5ms)
+
+
+Started GET "/admin/cars/20" for 127.0.0.1 at 2016-12-07 22:06:02 +0500
+Processing by Admin::CarsController#show as HTML
+  Parameters: {"id"=>"20"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mCar Load (0.1ms)[0m  [1m[34mSELECT  "cars".* FROM "cars" WHERE "cars"."id" = ? LIMIT ?[0m  [["id", 20], ["LIMIT", 1]]
+  Rendering admin/cars/sv_car.html.erb within layouts/admin
+  Rendered admin/cars/sv_car.html.erb within layouts/admin (295.5ms)
+Completed 500 Internal Server Error in 307ms (ActiveRecord: 0.3ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `admin_cars_path' for #<#<Class:0x007f18b54faab8>:0x007f18adb49d90>
+Did you mean?  admin_car_path
+               admin_routes_path
+               admin_trains_path
+               admin_train_path):
+    12: </p>
+    13: 
+    14: <%= link_to 'Edit', edit_admin_car_path(@car) %> |
+    15: <%= link_to 'Back', admin_cars_path %>
+  
+app/views/admin/cars/sv_car.html.erb:15:in `_app_views_admin_cars_sv_car_html_erb__375768447487418944_69871985093580'
+app/controllers/admin/cars_controller.rb:10:in `show'
+  Rendering /home/clu/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering /home/clu/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /home/clu/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (5.5ms)
+  Rendering /home/clu/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /home/clu/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.2ms)
+  Rendering /home/clu/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /home/clu/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.9ms)
+  Rendered /home/clu/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (39.1ms)
+Started GET "/admin/cars/20" for 127.0.0.1 at 2016-12-07 22:06:26 +0500
+Processing by Admin::CarsController#show as HTML
+  Parameters: {"id"=>"20"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mCar Load (0.1ms)[0m  [1m[34mSELECT  "cars".* FROM "cars" WHERE "cars"."id" = ? LIMIT ?[0m  [["id", 20], ["LIMIT", 1]]
+  Rendering admin/cars/sv_car.html.erb within layouts/admin
+  [1m[36mTrain Load (0.1ms)[0m  [1m[34mSELECT  "trains".* FROM "trains" WHERE "trains"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  Rendered admin/cars/sv_car.html.erb within layouts/admin (6.5ms)
+Completed 200 OK in 85ms (Views: 81.6ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/admin/trains/5" for 127.0.0.1 at 2016-12-07 22:06:32 +0500
+Processing by Admin::TrainsController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mTrain Load (0.0ms)[0m  [1m[34mSELECT  "trains".* FROM "trains" WHERE "trains"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  Rendering admin/trains/show.html.erb within layouts/admin
+  [1m[36mRailwayStation Load (0.1ms)[0m  [1m[34mSELECT  "railway_stations".* FROM "railway_stations" WHERE "railway_stations"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[36mRoute Load (0.1ms)[0m  [1m[34mSELECT  "routes".* FROM "routes" WHERE "routes"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  [1m[36mCar Load (0.1ms)[0m  [1m[34mSELECT "cars".* FROM "cars" WHERE "cars"."train_id" = ?[0m  [["train_id", 5]]
+  [1m[36mCar Load (0.2ms)[0m  [1m[34mSELECT "cars".* FROM "cars" WHERE "cars"."train_id" = ? ORDER BY number DESC[0m  [["train_id", 5]]
+  Rendered admin/trains/show.html.erb within layouts/admin (10.7ms)
+Completed 200 OK in 68ms (Views: 65.2ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/admin/trains/5" for 127.0.0.1 at 2016-12-07 22:06:33 +0500
+Processing by Admin::TrainsController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mTrain Load (0.1ms)[0m  [1m[34mSELECT  "trains".* FROM "trains" WHERE "trains"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  Rendering admin/trains/show.html.erb within layouts/admin
+  [1m[36mRailwayStation Load (0.1ms)[0m  [1m[34mSELECT  "railway_stations".* FROM "railway_stations" WHERE "railway_stations"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[36mRoute Load (0.1ms)[0m  [1m[34mSELECT  "routes".* FROM "routes" WHERE "routes"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  [1m[36mCar Load (0.1ms)[0m  [1m[34mSELECT "cars".* FROM "cars" WHERE "cars"."train_id" = ?[0m  [["train_id", 5]]
+  [1m[36mCar Load (0.2ms)[0m  [1m[34mSELECT "cars".* FROM "cars" WHERE "cars"."train_id" = ? ORDER BY number DESC[0m  [["train_id", 5]]
+  Rendered admin/trains/show.html.erb within layouts/admin (15.2ms)
+Completed 200 OK in 90ms (Views: 74.3ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/admin/trains/5" for 127.0.0.1 at 2016-12-07 22:06:35 +0500
+Processing by Admin::TrainsController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mTrain Load (0.1ms)[0m  [1m[34mSELECT  "trains".* FROM "trains" WHERE "trains"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  Rendering admin/trains/show.html.erb within layouts/admin
+  [1m[36mRailwayStation Load (0.2ms)[0m  [1m[34mSELECT  "railway_stations".* FROM "railway_stations" WHERE "railway_stations"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[36mRoute Load (0.1ms)[0m  [1m[34mSELECT  "routes".* FROM "routes" WHERE "routes"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  [1m[36mCar Load (0.2ms)[0m  [1m[34mSELECT "cars".* FROM "cars" WHERE "cars"."train_id" = ?[0m  [["train_id", 5]]
+  [1m[36mCar Load (0.2ms)[0m  [1m[34mSELECT "cars".* FROM "cars" WHERE "cars"."train_id" = ? ORDER BY number DESC[0m  [["train_id", 5]]
+  Rendered admin/trains/show.html.erb within layouts/admin (17.4ms)
+Completed 200 OK in 77ms (Views: 69.4ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/admin/trains/5/cars/new" for 127.0.0.1 at 2016-12-07 22:06:37 +0500
+Processing by Admin::CarsController#new as HTML
+  Parameters: {"train_id"=>"5"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mTrain Load (0.1ms)[0m  [1m[34mSELECT  "trains".* FROM "trains" WHERE "trains"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "trains".* FROM "trains" WHERE "trains"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  Rendering admin/cars/new.html.erb within layouts/admin
+  Rendered common/_errors.html.erb (0.3ms)
+  Rendered admin/cars/_form.html.erb (8.9ms)
+  Rendered admin/cars/new.html.erb within layouts/admin (10.5ms)
+Completed 200 OK in 106ms (Views: 101.5ms | ActiveRecord: 0.3ms)
+
+
+Started POST "/admin/trains/5/cars" for 127.0.0.1 at 2016-12-07 22:06:44 +0500
+Processing by Admin::CarsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"kNoO0knUAB/xitW+VmTLYiM9sM1/5PGB+TWXTa8thfcW3XybOkb4RYu1Ix+CJ4Mt9wbBUnDKMwus2B1REW1hkA==", "car"=>{"car_type"=>"sv", "up_space"=>"231", "low_space"=>"231", "side_up_space"=>"231", "side_low_space"=>"231", "seat_space"=>"231"}, "commit"=>"Create", "train_id"=>"5"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mTrain Load (0.1ms)[0m  [1m[34mSELECT  "trains".* FROM "trains" WHERE "trains"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT MAX("cars"."number") FROM "cars" WHERE "cars"."train_id" = 5[0m
+  [1m[36mCar Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "cars" WHERE "cars"."number" = ? AND "cars"."train_id" = ? LIMIT ?[0m  [["number", 3], ["train_id", 5], ["LIMIT", 1]]
+  [1m[35mSQL (1.4ms)[0m  [1m[32mINSERT INTO "cars" ("car_type", "up_space", "low_space", "created_at", "updated_at", "train_id", "number", "side_up_space", "side_low_space", "seat_space") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["car_type", "sv"], ["up_space", 231], ["low_space", 231], ["created_at", 2016-12-07 17:06:44 UTC], ["updated_at", 2016-12-07 17:06:44 UTC], ["train_id", 5], ["number", 3], ["side_up_space", 231], ["side_low_space", 231], ["seat_space", 231]]
+  [1m[35m (10.6ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/admin/trains/5
+Completed 302 Found in 28ms (ActiveRecord: 12.5ms)
+
+
+Started GET "/admin/trains/5" for 127.0.0.1 at 2016-12-07 22:06:44 +0500
+Processing by Admin::TrainsController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mTrain Load (0.1ms)[0m  [1m[34mSELECT  "trains".* FROM "trains" WHERE "trains"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  Rendering admin/trains/show.html.erb within layouts/admin
+  [1m[36mRailwayStation Load (0.1ms)[0m  [1m[34mSELECT  "railway_stations".* FROM "railway_stations" WHERE "railway_stations"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[36mRoute Load (0.1ms)[0m  [1m[34mSELECT  "routes".* FROM "routes" WHERE "routes"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  [1m[36mCar Load (0.1ms)[0m  [1m[34mSELECT "cars".* FROM "cars" WHERE "cars"."train_id" = ?[0m  [["train_id", 5]]
+  [1m[36mCar Load (0.2ms)[0m  [1m[34mSELECT "cars".* FROM "cars" WHERE "cars"."train_id" = ? ORDER BY number DESC[0m  [["train_id", 5]]
+  Rendered admin/trains/show.html.erb within layouts/admin (21.6ms)
+Completed 200 OK in 84ms (Views: 77.9ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/admin/cars/21" for 127.0.0.1 at 2016-12-07 22:06:46 +0500
+Processing by Admin::CarsController#show as HTML
+  Parameters: {"id"=>"21"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mCar Load (0.1ms)[0m  [1m[34mSELECT  "cars".* FROM "cars" WHERE "cars"."id" = ? LIMIT ?[0m  [["id", 21], ["LIMIT", 1]]
+  Rendering admin/cars/sv_car.html.erb within layouts/admin
+  [1m[36mTrain Load (0.1ms)[0m  [1m[34mSELECT  "trains".* FROM "trains" WHERE "trains"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  Rendered admin/cars/sv_car.html.erb within layouts/admin (4.3ms)
+Completed 200 OK in 64ms (Views: 58.8ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/admin/trains/5/cars/new" for 127.0.0.1 at 2016-12-07 22:06:49 +0500
+Processing by Admin::CarsController#new as HTML
+  Parameters: {"train_id"=>"5"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mTrain Load (0.1ms)[0m  [1m[34mSELECT  "trains".* FROM "trains" WHERE "trains"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "trains".* FROM "trains" WHERE "trains"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  Rendering admin/cars/new.html.erb within layouts/admin
+  Rendered common/_errors.html.erb (0.3ms)
+  Rendered admin/cars/_form.html.erb (6.3ms)
+  Rendered admin/cars/new.html.erb within layouts/admin (9.9ms)
+Completed 200 OK in 66ms (Views: 60.5ms | ActiveRecord: 0.3ms)
+
+
+Started POST "/admin/trains/5/cars" for 127.0.0.1 at 2016-12-07 22:06:56 +0500
+Processing by Admin::CarsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"DEd6jkuGN+9QcX8Es2nrW+2nd9fU8B3GsJY9pthm5RmKQAjHOBTPtSpOiaVnKqMUOZwGSNve30zle7e6ZiYBfg==", "car"=>{"car_type"=>"plazkart", "up_space"=>"321", "low_space"=>"321", "side_up_space"=>"321", "side_low_space"=>"321", "seat_space"=>"321"}, "commit"=>"Create", "train_id"=>"5"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mTrain Load (0.1ms)[0m  [1m[34mSELECT  "trains".* FROM "trains" WHERE "trains"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT MAX("cars"."number") FROM "cars" WHERE "cars"."train_id" = 5[0m
+  [1m[36mCar Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "cars" WHERE "cars"."number" = ? AND "cars"."train_id" = ? LIMIT ?[0m  [["number", 4], ["train_id", 5], ["LIMIT", 1]]
+  [1m[35mSQL (2.0ms)[0m  [1m[32mINSERT INTO "cars" ("car_type", "up_space", "low_space", "created_at", "updated_at", "train_id", "number", "side_up_space", "side_low_space", "seat_space") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["car_type", "plazkart"], ["up_space", 321], ["low_space", 321], ["created_at", 2016-12-07 17:06:56 UTC], ["updated_at", 2016-12-07 17:06:56 UTC], ["train_id", 5], ["number", 4], ["side_up_space", 321], ["side_low_space", 321], ["seat_space", 321]]
+  [1m[35m (36.7ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/admin/trains/5
+Completed 302 Found in 56ms (ActiveRecord: 39.3ms)
+
+
+Started GET "/admin/trains/5" for 127.0.0.1 at 2016-12-07 22:06:56 +0500
+Processing by Admin::TrainsController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mTrain Load (0.1ms)[0m  [1m[34mSELECT  "trains".* FROM "trains" WHERE "trains"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  Rendering admin/trains/show.html.erb within layouts/admin
+  [1m[36mRailwayStation Load (0.1ms)[0m  [1m[34mSELECT  "railway_stations".* FROM "railway_stations" WHERE "railway_stations"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[36mRoute Load (0.1ms)[0m  [1m[34mSELECT  "routes".* FROM "routes" WHERE "routes"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  [1m[36mCar Load (0.1ms)[0m  [1m[34mSELECT "cars".* FROM "cars" WHERE "cars"."train_id" = ?[0m  [["train_id", 5]]
+  [1m[36mCar Load (0.2ms)[0m  [1m[34mSELECT "cars".* FROM "cars" WHERE "cars"."train_id" = ? ORDER BY number DESC[0m  [["train_id", 5]]
+  Rendered admin/trains/show.html.erb within layouts/admin (12.7ms)
+Completed 200 OK in 92ms (Views: 85.7ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/admin/cars/22" for 127.0.0.1 at 2016-12-07 22:06:58 +0500
+Processing by Admin::CarsController#show as HTML
+  Parameters: {"id"=>"22"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mCar Load (0.1ms)[0m  [1m[34mSELECT  "cars".* FROM "cars" WHERE "cars"."id" = ? LIMIT ?[0m  [["id", 22], ["LIMIT", 1]]
+  Rendering admin/cars/plazkart_car.html.erb within layouts/admin
+  [1m[36mTrain Load (0.1ms)[0m  [1m[34mSELECT  "trains".* FROM "trains" WHERE "trains"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  Rendered admin/cars/plazkart_car.html.erb within layouts/admin (4.8ms)
+Completed 200 OK in 75ms (Views: 70.7ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/admin/trains/5/cars/new" for 127.0.0.1 at 2016-12-07 22:07:00 +0500
+Processing by Admin::CarsController#new as HTML
+  Parameters: {"train_id"=>"5"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mTrain Load (0.1ms)[0m  [1m[34mSELECT  "trains".* FROM "trains" WHERE "trains"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "trains".* FROM "trains" WHERE "trains"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  Rendering admin/cars/new.html.erb within layouts/admin
+  Rendered common/_errors.html.erb (0.4ms)
+  Rendered admin/cars/_form.html.erb (5.6ms)
+  Rendered admin/cars/new.html.erb within layouts/admin (8.9ms)
+Completed 200 OK in 80ms (Views: 71.9ms | ActiveRecord: 0.3ms)
+
+
+Started POST "/admin/trains/5/cars" for 127.0.0.1 at 2016-12-07 22:07:07 +0500
+Processing by Admin::CarsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"o9wUZ0C6Os/x1CO4aHfoOflL7f+U7BLxWNlkrv30JnEl22YuMyjClYvr1Rm8NKB2LXCcYJvC0HsNNO6yQ7TCFg==", "car"=>{"car_type"=>"coupe", "up_space"=>"44", "low_space"=>"44", "side_up_space"=>"44", "side_low_space"=>"44", "seat_space"=>"44"}, "commit"=>"Create", "train_id"=>"5"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mTrain Load (0.1ms)[0m  [1m[34mSELECT  "trains".* FROM "trains" WHERE "trains"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT MAX("cars"."number") FROM "cars" WHERE "cars"."train_id" = 5[0m
+  [1m[36mCar Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "cars" WHERE "cars"."number" = ? AND "cars"."train_id" = ? LIMIT ?[0m  [["number", 5], ["train_id", 5], ["LIMIT", 1]]
+  [1m[35mSQL (3.1ms)[0m  [1m[32mINSERT INTO "cars" ("car_type", "up_space", "low_space", "created_at", "updated_at", "train_id", "number", "side_up_space", "side_low_space", "seat_space") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["car_type", "coupe"], ["up_space", 44], ["low_space", 44], ["created_at", 2016-12-07 17:07:07 UTC], ["updated_at", 2016-12-07 17:07:07 UTC], ["train_id", 5], ["number", 5], ["side_up_space", 44], ["side_low_space", 44], ["seat_space", 44]]
+  [1m[35m (28.5ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/admin/trains/5
+Completed 302 Found in 45ms (ActiveRecord: 32.1ms)
+
+
+Started GET "/admin/trains/5" for 127.0.0.1 at 2016-12-07 22:07:07 +0500
+Processing by Admin::TrainsController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mTrain Load (0.1ms)[0m  [1m[34mSELECT  "trains".* FROM "trains" WHERE "trains"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  Rendering admin/trains/show.html.erb within layouts/admin
+  [1m[36mRailwayStation Load (0.1ms)[0m  [1m[34mSELECT  "railway_stations".* FROM "railway_stations" WHERE "railway_stations"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[36mRoute Load (0.1ms)[0m  [1m[34mSELECT  "routes".* FROM "routes" WHERE "routes"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  [1m[36mCar Load (0.1ms)[0m  [1m[34mSELECT "cars".* FROM "cars" WHERE "cars"."train_id" = ?[0m  [["train_id", 5]]
+  [1m[36mCar Load (0.2ms)[0m  [1m[34mSELECT "cars".* FROM "cars" WHERE "cars"."train_id" = ? ORDER BY number DESC[0m  [["train_id", 5]]
+  Rendered admin/trains/show.html.erb within layouts/admin (13.7ms)
+Completed 200 OK in 80ms (Views: 73.3ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/admin/cars/23" for 127.0.0.1 at 2016-12-07 22:07:08 +0500
+Processing by Admin::CarsController#show as HTML
+  Parameters: {"id"=>"23"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mCar Load (0.1ms)[0m  [1m[34mSELECT  "cars".* FROM "cars" WHERE "cars"."id" = ? LIMIT ?[0m  [["id", 23], ["LIMIT", 1]]
+  Rendering admin/cars/coupe_car.html.erb within layouts/admin
+  [1m[36mTrain Load (0.1ms)[0m  [1m[34mSELECT  "trains".* FROM "trains" WHERE "trains"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  Rendered admin/cars/coupe_car.html.erb within layouts/admin (2.9ms)
+Completed 200 OK in 60ms (Views: 51.4ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/admin/trains" for 127.0.0.1 at 2016-12-07 22:07:12 +0500
+Processing by Admin::TrainsController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering admin/trains/index.html.erb within layouts/admin
+  [1m[36mTrain Load (0.1ms)[0m  [1m[34mSELECT "trains".* FROM "trains"[0m
+  Rendered collection of admin/trains/_train.html.erb [5 times] (4.1ms)
+  Rendered admin/trains/index.html.erb within layouts/admin (7.4ms)
+Completed 200 OK in 65ms (Views: 58.6ms | ActiveRecord: 0.3ms)
+
+
+Started DELETE "/admin/trains/5" for 127.0.0.1 at 2016-12-07 22:07:16 +0500
+Processing by Admin::TrainsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"QDPff3dLGamV5is++W/2624aMxhdmRyQdpNTRP/xL6e1NnIG8VYQpXhf8oxgEIWj9hpU3YvwR/NQx9dQZUM8Uw==", "id"=>"5"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mTrain Load (2.2ms)[0m  [1m[34mSELECT  "trains".* FROM "trains" WHERE "trains"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (1.1ms)[0m  [1m[31mDELETE FROM "trains" WHERE "trains"."id" = ?[0m  [["id", 5]]
+  [1m[35m (6.6ms)[0m  [1m[36mcommit transaction[0m
+Completed 500 Internal Server Error in 172ms (ActiveRecord: 10.2ms)
+
+
+  
+NameError (undefined local variable or method `trains_url' for #<Admin::TrainsController:0x007f18adccc500>
+Did you mean?  train_params):
+  
+app/controllers/admin/trains_controller.rb:37:in `destroy'
+  Rendering /home/clu/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /home/clu/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /home/clu/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (11.0ms)
+  Rendering /home/clu/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /home/clu/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (4.2ms)
+  Rendering /home/clu/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /home/clu/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered /home/clu/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (152.7ms)
+Started DELETE "/admin/trains/5" for 127.0.0.1 at 2016-12-07 22:07:36 +0500
+Processing by Admin::TrainsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"QDPff3dLGamV5is++W/2624aMxhdmRyQdpNTRP/xL6e1NnIG8VYQpXhf8oxgEIWj9hpU3YvwR/NQx9dQZUM8Uw==", "id"=>"5"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mTrain Load (0.1ms)[0m  [1m[34mSELECT  "trains".* FROM "trains" WHERE "trains"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+Completed 404 Not Found in 47ms (ActiveRecord: 1.5ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Train with 'id'=5):
+  
+app/controllers/admin/trains_controller.rb:42:in `set_train'
+  Rendering /home/clu/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /home/clu/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /home/clu/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (7.4ms)
+  Rendering /home/clu/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /home/clu/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (4.1ms)
+  Rendering /home/clu/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /home/clu/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.9ms)
+  Rendered /home/clu/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (54.1ms)
+Started GET "/admin/trains" for 127.0.0.1 at 2016-12-07 22:07:38 +0500
+Processing by Admin::TrainsController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering admin/trains/index.html.erb within layouts/admin
+  [1m[36mTrain Load (0.2ms)[0m  [1m[34mSELECT "trains".* FROM "trains"[0m
+  Rendered collection of admin/trains/_train.html.erb [4 times] (1.7ms)
+  Rendered admin/trains/index.html.erb within layouts/admin (19.6ms)
+Completed 200 OK in 80ms (Views: 77.3ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/admin/trains/new" for 127.0.0.1 at 2016-12-07 22:07:41 +0500
+Processing by Admin::TrainsController#new as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering admin/trains/new.html.erb within layouts/admin
+  Rendered common/_errors.html.erb (0.4ms)
+  [1m[36mRailwayStation Load (0.2ms)[0m  [1m[34mSELECT "railway_stations".* FROM "railway_stations"[0m
+  [1m[36mRoute Load (0.2ms)[0m  [1m[34mSELECT "routes".* FROM "routes"[0m
+  Rendered admin/trains/_form.html.erb (47.4ms)
+  Rendered admin/trains/new.html.erb within layouts/admin (55.5ms)
+Completed 200 OK in 118ms (Views: 112.1ms | ActiveRecord: 1.8ms)
+
+
+Started POST "/admin/trains" for 127.0.0.1 at 2016-12-07 22:07:43 +0500
+Processing by Admin::TrainsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"SYnVhIIAcWMpZMTAllFxuAl5tNZmAloCLD57ZUas6xbovoqhdDsFkklb8fSj5tNSTSpLf/Mv/RYT7fe9/R1pKQ==", "train"=>{"number"=>"123", "current_station_id"=>"1", "route_id"=>"2"}, "commit"=>"Create"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mRailwayStation Load (0.1ms)[0m  [1m[34mSELECT  "railway_stations".* FROM "railway_stations" WHERE "railway_stations"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mRoute Load (0.1ms)[0m  [1m[34mSELECT  "routes".* FROM "routes" WHERE "routes"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[35mSQL (3.9ms)[0m  [1m[32mINSERT INTO "trains" ("number", "created_at", "updated_at", "current_station_id", "route_id") VALUES (?, ?, ?, ?, ?)[0m  [["number", "123"], ["created_at", 2016-12-07 17:07:43 UTC], ["updated_at", 2016-12-07 17:07:43 UTC], ["current_station_id", 1], ["route_id", 2]]
+  [1m[35m (11.5ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/admin/trains/6
+Completed 302 Found in 35ms (ActiveRecord: 16.2ms)
+
+
+Started GET "/admin/trains/6" for 127.0.0.1 at 2016-12-07 22:07:43 +0500
+Processing by Admin::TrainsController#show as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mTrain Load (0.1ms)[0m  [1m[34mSELECT  "trains".* FROM "trains" WHERE "trains"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  Rendering admin/trains/show.html.erb within layouts/admin
+  [1m[36mRailwayStation Load (0.1ms)[0m  [1m[34mSELECT  "railway_stations".* FROM "railway_stations" WHERE "railway_stations"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mRoute Load (0.1ms)[0m  [1m[34mSELECT  "routes".* FROM "routes" WHERE "routes"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCar Load (0.1ms)[0m  [1m[34mSELECT "cars".* FROM "cars" WHERE "cars"."train_id" = ?[0m  [["train_id", 6]]
+  Rendered admin/trains/show.html.erb within layouts/admin (33.4ms)
+Completed 200 OK in 96ms (Views: 86.5ms | ActiveRecord: 5.1ms)
+
+
+Started GET "/admin/trains" for 127.0.0.1 at 2016-12-07 22:07:45 +0500
+Processing by Admin::TrainsController#index as HTML
+  [1m[36mUser Load (2.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering admin/trains/index.html.erb within layouts/admin
+  [1m[36mTrain Load (0.1ms)[0m  [1m[34mSELECT "trains".* FROM "trains"[0m
+  Rendered collection of admin/trains/_train.html.erb [5 times] (1.7ms)
+  Rendered admin/trains/index.html.erb within layouts/admin (7.9ms)
+Completed 200 OK in 73ms (Views: 67.3ms | ActiveRecord: 2.1ms)
+
+
+Started DELETE "/admin/trains/6" for 127.0.0.1 at 2016-12-07 22:07:48 +0500
+Processing by Admin::TrainsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"iD5hylIJGBe4y5HGcMVa/zFqCWbrEv/FXHz0bxmVsW99O8yz1BQRG1VySHTpuim3qWpuoz17pKZ6KHB7gyeimw==", "id"=>"6"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mTrain Load (0.1ms)[0m  [1m[34mSELECT  "trains".* FROM "trains" WHERE "trains"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (2.6ms)[0m  [1m[31mDELETE FROM "trains" WHERE "trains"."id" = ?[0m  [["id", 6]]
+  [1m[35m (6.4ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/admin/trains
+Completed 302 Found in 15ms (ActiveRecord: 9.3ms)
+
+
+Started GET "/admin/trains" for 127.0.0.1 at 2016-12-07 22:07:48 +0500
+Processing by Admin::TrainsController#index as HTML
+  [1m[36mUser Load (2.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering admin/trains/index.html.erb within layouts/admin
+  [1m[36mTrain Load (0.1ms)[0m  [1m[34mSELECT "trains".* FROM "trains"[0m
+  Rendered collection of admin/trains/_train.html.erb [4 times] (1.3ms)
+  Rendered admin/trains/index.html.erb within layouts/admin (6.2ms)
+Completed 200 OK in 72ms (Views: 67.7ms | ActiveRecord: 2.3ms)
+
+
+Started GET "/admin/trains" for 127.0.0.1 at 2016-12-07 22:07:51 +0500
+Processing by Admin::TrainsController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering admin/trains/index.html.erb within layouts/admin
+  [1m[36mTrain Load (0.2ms)[0m  [1m[34mSELECT "trains".* FROM "trains"[0m
+  Rendered collection of admin/trains/_train.html.erb [4 times] (1.6ms)
+  Rendered admin/trains/index.html.erb within layouts/admin (9.4ms)
+Completed 200 OK in 67ms (Views: 61.2ms | ActiveRecord: 0.4ms)
+
+
