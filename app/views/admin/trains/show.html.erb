@@ -1,5 +1,3 @@
-<p id="notice"><%= notice %></p>
-
 <p>
   <strong>Number:</strong>
   <%= @train.number %>
@@ -28,11 +26,11 @@
       <strong>List of cars cars:</strong>
       <% if @train.ordering %>
         <% @train.cars.asc.each do |car| %>
-          <%= link_to "#{car.number}", car %>
+          <%= link_to "#{car.number}", [:admin, car] %>
         <% end %>
       <% else %>
         <% @train.cars.desc.each do |car| %>
-          <%= link_to "#{car.number}", car %>
+          <%= link_to "#{car.number}", [:admin, car] %>
         <% end %>
       <% end %>
     </p>
@@ -42,9 +40,9 @@
 </p>
 
 <p>
-  <%= link_to "Add car", new_train_car_path(@train) %>
+  <%= link_to "Add car", new_admin_train_car_path(@train) %>
 </p>
 
 
-<%= link_to 'Edit', edit_train_path(@train) %> |
-<%= link_to 'Back', trains_path %>
+<%= link_to 'Edit', edit_admin_train_path(@train) %> |
+<%= link_to 'Back', admin_trains_path %>

@@ -1,4 +1,4 @@
-class Admin::CarsController < ApplicationController
+class Admin::CarsController < Admin::BaseController
   before_action :set_car, only: [:show, :edit, :update, :destroy]
   before_action :set_train, only: [:new, :create]
 
@@ -21,7 +21,7 @@ class Admin::CarsController < ApplicationController
   def create
     @car = @train.cars.new(car_params)
     if @car.save
-      redirect_to @train, notice: 'Car was successfully created.'
+      redirect_to [:admin, @train], notice: 'Car was successfully created.'
     else
       render :new
     end
@@ -29,7 +29,7 @@ class Admin::CarsController < ApplicationController
 
   def update
     if @car.update(car_params)
-      redirect_to @car.train, notice: 'Car was successfully updated.'
+      redirect_to [:admin, @car.train], notice: 'Car was successfully updated.'
     else
       render :edit
     end
@@ -37,7 +37,7 @@ class Admin::CarsController < ApplicationController
 
   def destroy
     @car.destroy
-    redirect_to cars_url, notice: 'Car was successfully destroyed.'
+    redirect_to admin_cars_url, notice: 'Car was successfully destroyed.'
   end
 
   private
