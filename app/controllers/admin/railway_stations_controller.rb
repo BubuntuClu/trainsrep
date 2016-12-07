@@ -40,13 +40,13 @@ class Admin::RailwayStationsController < Admin::BaseController
   def update_station_order
     @route=Route.find(params[:route_id])
     @railway_station.update_station_order(@route, params[:order])
-    redirect_to @route
+    redirect_to [:admin, @route]
   end
 
   def update_time
     @route=Route.find(params[:route_id])
     @railway_station.update_time(@route, params[:arrival], params[:departure])
-    redirect_to @route
+    redirect_to [:admin, @route]
   end
 
   private
