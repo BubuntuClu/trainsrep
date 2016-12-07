@@ -1,0 +1,34 @@
+<h1>Buying ticket</h1>
+
+<p>Train number</p>
+<p><%= @train.number %></p>
+
+<p>Departure station</p>
+<p><%= @start_station.title %></p>
+
+<p>Arrival station</p>
+<p><%= @end_station.title %></p>
+
+<h1>Passenger info</h1>
+<%= form_for(@ticket) do |f| %>
+
+  <%= render 'common/errors', resource: @ticket %>
+
+  <%= f.hidden_field :train_id %>
+  <%= f.hidden_field :start_station_id %>
+  <%= f.hidden_field :end_station_id %>
+
+  <div class="field">
+    <%= f.label :pas_name, "Passenger name" %>
+    <%= f.text_field :pas_name %>
+  </div>
+
+  <div class="field">
+    <%= f.label :pas_pasport, "Passenger pasport" %>
+    <%= f.text_field :pas_pasport %>
+  </div>
+
+  <div class="actions">
+    <%= f.submit "Buy ticket" %>
+  </div>
+<% end %>
