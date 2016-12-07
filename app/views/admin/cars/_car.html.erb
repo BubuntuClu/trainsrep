@@ -1,0 +1,6 @@
+<tr>
+  <td>Train - <%= car.train.number %>. Car number - <%= car.number %></td>
+  <td><%= link_to 'Show', [:admin,train_car_path(train)] %></td>
+  <td><%= link_to 'Edit', edit_admin_train_car_path(car) %></td>
+  <td><%= link_to 'Destroy', [:admin,train_car_path], method: :delete, data: { confirm: 'Are you sure?' } %></td>
+</tr>
