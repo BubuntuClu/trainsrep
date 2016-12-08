@@ -3,7 +3,7 @@ class Admin::TicketsController < Admin::BaseController
   before_action :hidden_params, only: [:new]
 
   def index
-      @tickets =Ticket.all
+    @tickets =Ticket.all
   end
 
   def show
