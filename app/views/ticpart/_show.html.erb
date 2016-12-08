@@ -1,0 +1,19 @@
+<h1>Ticket info</h1>
+
+<p>Who bought ticket: <%= @ticket.user.email %></p>
+
+<p>Train number: <%= @ticket.train.number %></p>
+
+<p>Departure station: <%= @ticket.start_station.title %></p>
+
+<p>Arrival station: <%= @ticket.end_station.title %></p>
+
+<p>Passenger name: <%= @ticket.pas_name %></p>
+
+<p>Passenger pasport: <%= @ticket.pas_pasport %></p>
+
+<% if current_user.admin? %>
+  <%= link_to 'To tickets list', admin_tickets_path %>
+<% else %>
+  <%= link_to 'To tickets list', tickets_path %>
+<% end %>

@@ -1,8 +1,0 @@
-<tr>
-  <td>Train number: <%= ticket.train.number %></td>
-  <td><%= link_to 'Show',  ticket %></td>
-  <% if current_user.admin? %>
-    <td><%= link_to 'Edit', edit_ticket_path(ticket) %></td>
-  <% end %>
-  <td><%= link_to 'Destroy', ticket, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-</tr>
