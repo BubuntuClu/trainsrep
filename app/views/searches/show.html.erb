@@ -1,22 +1,23 @@
 <h1>SEARCH TICKET</h1>
 
-<%= form_for(@search, method: :post , url: search_path) do |f| %>
-  <div class="field">
-    <%= f.label :start_station_id, "Start station" %>
+<div class="row">
+  <%= form_for(@search, method: :post , url: search_path) do |f| %>
+  <div class="col-md-4">
+    <%= f.label :start_station_id, "Start station", class: 'form-control-label' %>
     <%= f.collection_select :start_station_id, RailwayStation.all, :id, :title %>
   </div>
 
-   <div class="field">
-    <%= f.label :end_station_id, "End station" %>
+   <div class="col-md-4">
+    <%= f.label :end_station_id, "End station" , class: 'form-control-label' %>
     <%= f.collection_select :end_station_id, RailwayStation.all, :id, :title %>
   </div>
-  <div class="actions">
-    <%= f.submit 'Search' %>
+  <div class="col-md-4">
+    <%= f.submit 'Search' , class: 'btn btn-primary'%>
   </div>
 
 
   <% if @search.search_result %>
-    <table>
+    <table class="table table-bordered">
       <thead>
         <tr>
           <td>Train</td>
@@ -32,24 +33,22 @@
           <td><%= res.route.name %></td>
           <td><%= @search.find_start_station.station_time(res.route, :departure) %></td>
           <td><%= @search.find_end_station.station_time(res.route, :arrival) %></td>
-          <td><%= res.id %></td>
           <td>
             <% if current_user.admin? %>
               <%= form_tag new_admin_ticket_path, method: :get do %>
                 <%= hidden_field_tag :train_id, res.id %>
                 <%= hidden_field_tag :start_station_id, @search.start_station_id %>
                 <%= hidden_field_tag :end_station_id, @search.end_station_id %>
-                <%= submit_tag "Buy ticket" %>
+                <%= submit_tag "Buy ticket", class: 'btn btn-default btn-sm' %>
               <% end %>
             <% else %>
               <%= form_tag new_ticket_path, method: :get do %>
                 <%= hidden_field_tag :train_id, res.id %>
                 <%= hidden_field_tag :start_station_id, @search.start_station_id %>
                 <%= hidden_field_tag :end_station_id, @search.end_station_id %>
-                <%= submit_tag "Buy ticket" %>
+                <%= submit_tag "Buy ticket", class: 'btn btn-primary btn-sm' %>
               <% end %>
             <% end %>
-              
           </td>
         </tr>
         <% end %>
@@ -57,3 +56,4 @@
     </table>
   <% end %>
 <% end %>
+</div>

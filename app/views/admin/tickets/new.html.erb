@@ -1,13 +1,16 @@
 <h1>Buying ticket</h1>
+<form class="form-horizontal">
+  <div class='form-group'>
+    <div class="col-sm-2 control-label">Train number: <%= @train.number %></div>
+  </div>
 
-<p>Train number</p>
-<p><%= @train.number %></p>
+  <div class='form-group'>
+    <div class="col-sm-2 control-label">Departure station: <%= @start_station.title %></div>
+  </div>
 
-<p>Departure station</p>
-<p><%= @start_station.title %></p>
-
-<p>Arrival station</p>
-<p><%= @end_station.title %></p>
-
+  <div class='form-group'>
+    <div class="col-sm-2 control-label">Arrival station: <%= @end_station.title %></div>
+  </div>
+</form>
 <h1>Passenger info</h1>
 <%= render 'form', ticket: @ticket %>

@@ -1,21 +1,27 @@
 <%= form_for([:admin, railway_station]) do |f| %>
   <%= render 'common/errors', resource: railway_station %>
-  <div class="field">
-    <%= f.label :title %>
-    <%= f.text_field :title %>
-  </div>
+    <div class='form-group'>
+      <%= f.label :title, class: 'col-sm-1 control-label' %>
+      <div class="col-sm-11">
+        <%= f.text_field :title %>
+      </div>
+    </div>
 
-  <div class="field">
-    <%= f.label :arrival %>
-    <%= date_field("f","arrival") %>
-  </div>
+    <div class='form-group'>
+      <%= f.label :arrival, class: 'col-sm-1 control-label' %>
+      <div class="col-sm-11">
+        <%= date_field("f","arrival") %>
+      </div>
+    </div>
 
-  <div class="field">
-    <%= f.label :departure %>
-    <%= date_field("f","departure") %>
-  </div>
-
-  <div class="actions">
-    <%= f.submit %>
-  </div>
+    <div class='form-group'>
+      <%= f.label :departure , class: 'col-sm-1 control-label' %>
+      <div class="col-sm-11">
+        <%= date_field("f","departure") %>
+      </div>
+    </div>
+    <div class="actions">
+      <%= f.submit t('.submit', action: @railway_station.new_record? ? 'Создать' : 'Изменить') , class: 'btn btn-default btn-sm'%>
+    </div>
+  
 <% end %>
