@@ -1,0 +1,39 @@
+
+<%= form_for [:admin, @train, car] do |f| %>
+  <%= render 'common/errors', resource: car %>
+
+
+  <div class="field">
+    <%= f.label :car_type, "Car's type" %>
+    <%= f.select :car_type, ["seat", "sv", "plazkart","coupe"] %>
+  </div>
+
+  <div class="field">
+    <%= f.label :up_space %>
+    <%= f.text_field :up_space %>
+  </div>
+
+  <div class="field">
+    <%= f.label :low_space %>
+    <%= f.text_field :low_space %>
+  </div>
+
+    <div class="field">
+    <%= f.label :side_up_space %>
+    <%= f.text_field :side_up_space %>
+  </div>
+
+  <div class="field">
+    <%= f.label :side_low_space %>
+    <%= f.text_field :side_low_space %>
+  </div>
+
+  <div class="field">
+    <%= f.label :seat_space %>
+    <%= f.text_field :seat_space %>
+  </div>
+
+  <div class="actions">
+    <%= f.submit "#{car.new_record? ? 'Create' : 'Update' }" %>
+  </div>
+<% end %>

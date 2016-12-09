@@ -1,0 +1,13 @@
+<h1>Buying ticket</h1>
+
+<p>Train number</p>
+<p><%= @train.number %></p>
+
+<p>Departure station</p>
+<p><%= @start_station.title %></p>
+
+<p>Arrival station</p>
+<p><%= @end_station.title %></p>
+
+<h1>Passenger info</h1>
+<%= render 'form', ticket: @ticket %>

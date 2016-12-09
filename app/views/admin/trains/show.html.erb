@@ -1,0 +1,48 @@
+<p>
+  <strong>Number:</strong>
+  <%= @train.number %>
+  </br>
+</p>
+<p>
+  <strong>On station:</strong>
+  <% if @train.current_station.present? %>
+    <%= @train.current_station.title %>
+  <% else %>
+    Not set
+  <% end %>
+</p>
+<p>
+  <strong>Train's route:</strong>
+  <% if @train.route.present? %>
+    <%= @train.route.name %>
+  <% else %>
+    Train hasnt got any route
+  <% end %>
+</p>
+
+<p>
+  <% if @train.cars.present? %>
+    <p>
+      <strong>List of cars cars:</strong>
+      <% if @train.ordering %>
+        <% @train.cars.asc.each do |car| %>
+          <%= link_to "#{car.number}", [:admin, car] %>
+        <% end %>
+      <% else %>
+        <% @train.cars.desc.each do |car| %>
+          <%= link_to "#{car.number}", [:admin, car] %>
+        <% end %>
+      <% end %>
+    </p>
+  <% else %>
+    Train hasnt got any cars
+  <% end %>
+</p>
+
+<p>
+  <%= link_to "Add car", new_admin_train_car_path(@train) %>
+</p>
+
+
+<%= link_to 'Edit', edit_admin_train_path(@train) %> |
+<%= link_to 'Back', admin_trains_path %>

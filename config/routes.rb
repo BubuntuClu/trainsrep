@@ -1,18 +1,23 @@
 Rails.application.routes.draw do
-  resources :routes
+  devise_for :users
   
-  resources :trains do
-    resources :cars, shallow: true
-  end
-  
-  resources :railway_stations do
-    patch :update_station_order, on: :member
-    patch :update_time, on: :member
-  end
-
   resource :search, only: [:show, :create]
   # resource :ticket, only: [:show, :create, :new]
   resources :tickets
+
+  namespace :admin do
+    resources :railway_stations do
+      patch :update_station_order, on: :member
+      patch :update_time, on: :member
+    end
+
+    resources :trains do
+      resources :cars, shallow: true
+    end
+
+    resources :routes
+    resources :tickets
+  end
 
   get 'welcome/index'
   root 'welcome#index'

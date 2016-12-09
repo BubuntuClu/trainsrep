@@ -1,0 +1,34 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Number:<%= @car.number %></p></strong>
+<p>
+  <strong>Type:</strong>
+  <%= @car.car_type %>
+</p>
+<p>
+  <strong>Up space count:</strong>
+    <%= @car.up_space %>
+</p>
+<p>
+  <strong>Low space count:</strong>
+    <%= @car.low_space %>
+</p>
+
+<p>
+  <strong>Low side space count:</strong>
+    <%= @car.side_low_space %>
+</p>
+
+<p>
+  <strong>Low side uppace count:</strong>
+    <%= @car.side_up_space %>
+</p>
+
+<p>
+  <strong>Seat space count:</strong>
+    <%= @car.seat_space %>
+</p>
+
+<%= link_to 'Edit', edit_admin_car_path(@car) %> |
+<%= link_to 'Back', [:admin, @car.train] %>
