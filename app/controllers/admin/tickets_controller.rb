@@ -10,7 +10,7 @@ class Admin::TicketsController < Admin::BaseController
   end
 
   def destroy
-    Ticket.find(params[:id]).destroy
+    set_ticket.destroy
     redirect_to admin_tickets_path, notice: 'Ticket was successfully destroyed.'
   end
 
