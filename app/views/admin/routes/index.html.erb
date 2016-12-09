@@ -1,4 +1,4 @@
-<h1>Routes list</h1>
+<h1><%= t('admin.routes.index.routes_list')%></h1>
 
 <table class="table table-bordered">
   <thead>
@@ -12,14 +12,15 @@
     <% @routes.each do |route| %>
       <tr>
         <td><%= route.name %></td>
-        <td><%= link_to 'Show', [:admin, route] %></td>
-        <td><%= link_to 'Edit', edit_admin_route_path(route) %></td>
-        <td><%= link_to 'Destroy', [:admin, route], method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to t('common.show'), [:admin, route] %></td>
+        <td><%= link_to t('common.edit'), edit_admin_route_path(route) %></td>
+        <td><%= link_to t('common.destroy'), [:admin, route], method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
     <% end %>
   </tbody>
 </table>
-
 <br>
 
-<%= link_to 'New Route', new_admin_route_path %>
+<%= link_to t('admin.routes.index.new_route'), new_admin_route_path %>
+
+

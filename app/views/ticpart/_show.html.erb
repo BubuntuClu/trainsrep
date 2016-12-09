@@ -1,19 +1,19 @@
-<h1>Ticket info</h1>
+<h1><%= t('tickets.show.ticket_info') %></h1>
 
-<p>Who bought ticket: <%= @ticket.user.email %></p>
+<p><%= t('ticketinfo.owner') %>: <%= @ticket.user.email %></p>
 
-<p>Train number: <%= @ticket.train.number %></p>
+<p><%= t('ticketinfo.tr_number') %>: <%= @ticket.train.number %></p>
 
-<p>Departure station: <%= @ticket.start_station.title %></p>
+<p><%= t('ticketinfo.departure_station') %>: <%= @ticket.start_station.title %></p>
 
-<p>Arrival station: <%= @ticket.end_station.title %></p>
+<p><%= t('ticketinfo.arrival_station') %>: <%= @ticket.end_station.title %></p>
 
-<p>Passenger name: <%= @ticket.pas_name %></p>
+<p><%= t('ticketinfo.pas_name') %>: <%= @ticket.pas_name %></p>
 
-<p>Passenger pasport: <%= @ticket.pas_pasport %></p>
+<p><%= t('ticketinfo.pas_pasport') %>: <%= @ticket.pas_pasport %></p>
 
 <% if current_user.admin? %>
-  <%= link_to 'To tickets list', admin_tickets_path %>
+  <%= link_to t('admin.tickets.show.to_tickets_list'), admin_tickets_path %>
 <% else %>
-  <%= link_to 'To tickets list', tickets_path %>
+  <%= link_to  t('tickets.show.to_tickets_list') , tickets_path %>
 <% end %>
