@@ -1,0 +1,33 @@
+ru:
+  common:
+    back: 'Назад'
+    show: 'Просмотреть'
+    edit: 'Изменить'
+    destroy: 'Удалить'
+    errors: 'При заполнении формы возникли ошибки'
+  admin:
+    railway_stations:
+      new:
+        title: 'Новая станция'
+      form:
+        submit: '%{action} станцию'
+    tickets:
+      index:
+        header: 'Список билетов'
+      show:
+        to_tickets_list: 'К списку билетов'
+    routes:
+      index:
+        new_route: 'Добавить новый маршрут'
+        routes_list: 'Список маршрутов'
+  ticketinfo:
+    owner: 'Покупатель'
+    tr_number: 'Номер поезда'
+    departure_station: 'Станция отправления'
+    arrival_station: 'Станция прибытия'
+    pas_name: 'Имя пассажира'
+    pas_pasport: 'Паспорт пассажира'
+  tickets:
+    show:
+      to_tickets_list: 'К списку билетов'
+      ticket_info: 'Информация о билете'
