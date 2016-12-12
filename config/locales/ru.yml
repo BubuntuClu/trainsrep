@@ -31,3 +31,7 @@ ru:
     show:
       to_tickets_list: 'К списку билетов'
       ticket_info: 'Информация о билете'
+  mailer:
+    buy_ticket: 'Вы купили билет'
+    delete_ticket: 'Билет был отменен'
+    watch_here: 'здесь'

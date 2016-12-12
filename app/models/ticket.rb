@@ -7,6 +7,7 @@ class Ticket < ApplicationRecord
   validates :pas_name, :pas_pasport, presence: true
 
   after_create :send_notification
+  after_destroy :send_notification_destroy
 
   def route_name
     "#{start_station.title} - #{end_station.title}"
@@ -16,5 +17,9 @@ class Ticket < ApplicationRecord
 
   def send_notification
     TicketsMailer.buy_ticket(self.user, self).deliver_now
+  end
+
+  def send_notification_destroy
+    TicketsMailer.delete_ticket(self.user, self).deliver_now
   end
 end

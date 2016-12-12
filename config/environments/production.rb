@@ -83,4 +83,27 @@ Rails.application.configure do
 
   # Do not dump schema after migrations.
   config.active_record.dump_schema_after_migration = false
+
+  config.action_mailer.default_url_options = { host: "polar-bastion-42928.herokuapp.com" }
+  config.action_mailer.delivery_method = :smtp  
+  config.action_mailer.perform_deliveries = true  
+  config.action_mailer.raise_delivery_errors = false  
+  config.action_mailer.default :charset => "utf-8"  
+  config.action_mailer.smtp_settings = {  
+    address: "smtp.gmail.com",
+    port: 587,
+    domain: "polar-bastion-42928.herokuapp.com",
+    authentication: "plain",
+    enable_starttls_auto: true,
+    user_name: ENV["GMAIL_USERNAME"],
+    password: ENV["GMAIL_PASSWORD"]
+  }
+#   ActionMailer::Base
+
+#   Server  smtp.sendgrid.net
+# Ports   
+# 25, 587   (for unencrypted/TLS connections)
+# 465   (for SSL connections)
+# Username  apikey
+# Password  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
 end

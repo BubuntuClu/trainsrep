@@ -1,5 +1,6 @@
 <p>Привет, <%= @user.first_name %></p>
 
 <p>Вы купили билет по маршруту <%= @ticket.route_name %> </p>
-<p>Посмотреть билет вы можете <%= link_to "здесь", @ticket %></p>
-<p>Все свои билеты вы можете посмотреть <%= link_to "здесь", tickets_url %></p>
+<p>Посмотреть билет вы можете <%= link_to t('mailer.watch_here'), @ticket %></p>
+<p>Все свои билеты вы можете посмотреть <%= link_to t('mailer.watch_here'), tickets_url %></p>
+
