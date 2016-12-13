@@ -1,5 +1,5 @@
-<%= form_for([:admin, railway_station]) do |f| %>
-  <%= render 'common/errors', resource: railway_station %>
+<%= form_for([:admin, station], html: {style: "display: #{hidden ? 'none' : 'block'}" }) do |f| %>
+  <%= render 'common/errors', resource: station %>
     <div class='form-group'>
       <%= f.label :title, class: 'col-sm-1 control-label' %>
       <div class="col-sm-11">
@@ -21,7 +21,7 @@
       </div>
     </div>
     <div class="actions">
-      <%= f.submit t('.submit', action: @railway_station.new_record? ? 'Создать' : 'Изменить') , class: 'btn btn-default btn-sm'%>
+      <%= f.submit t('.submit', action: station.new_record? ? 'Создать' : 'Изменить') , class: 'btn btn-default btn-sm'%>
     </div>
   
 <% end %>

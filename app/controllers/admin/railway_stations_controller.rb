@@ -26,7 +26,7 @@ class Admin::RailwayStationsController < Admin::BaseController
 
   def update
     if @railway_station.update(railway_station_params)
-      redirect_to [:admin, @railway_station] , notice: 'Railway station was successfully updated.'
+      redirect_to admin_railway_stations_path , notice: 'Railway station was successfully updated.'
     else
       render :edit
     end
@@ -34,7 +34,7 @@ class Admin::RailwayStationsController < Admin::BaseController
 
   def destroy
     @railway_station.destroy
-    redirect_to admin_railway_stations_url, notice: 'Railway station was successfully destroyed.'
+    redirect_to admin_railway_stations_path, notice: 'Railway station was successfully destroyed.'
   end
 
   def update_station_order

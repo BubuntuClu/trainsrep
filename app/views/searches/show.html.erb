@@ -1,7 +1,7 @@
 <h1>SEARCH TICKET</h1>
 
 <div class="row">
-  <%= form_for(@search, method: :post , url: search_path) do |f| %>
+  <%= form_for(@search, method: :post , url: search_path, html: { class: 'search_form'}) do |f| %>
   <div class="col-md-4">
     <%= f.label :start_station_id, "Start station", class: 'form-control-label' %>
     <%= f.collection_select :start_station_id, RailwayStation.all, :id, :title %>
@@ -12,7 +12,7 @@
     <%= f.collection_select :end_station_id, RailwayStation.all, :id, :title %>
   </div>
   <div class="col-md-4">
-    <%= f.submit 'Search' , class: 'btn btn-primary'%>
+    <%= f.submit 'Search' , class: 'btn btn-primary find'%>
   </div>
 
 
