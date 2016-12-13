@@ -1,0 +1,4 @@
+<p>Привет, <%= @user.first_name %></p>
+
+<p>Ваш билет по маршруту <%= @ticket.route_name %> был отменен.</p>
+<p>Все свои билеты вы можете посмотреть <%= link_to t('mailer.watch_here'), tickets_url %></p>
