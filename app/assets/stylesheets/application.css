@@ -13,3 +13,12 @@
  *= require_tree .
  *= require_self
  */
+
+
+.hidden_form{
+  display: none;
+}
+
+.active_form{
+  display: block;
+}
