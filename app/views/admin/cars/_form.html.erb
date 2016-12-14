@@ -8,32 +8,61 @@
     <%= f.select :car_type, ["seat", "sv", "plazkart","coupe"] %>
   </div>
 
-  <div class="field">
-    <%= f.label :up_space %>
-    <%= f.text_field :up_space %>
+  <div id="seat_form">
+    <div class="field">
+      <%= f.label :seat_space %>
+      <%= f.text_field :seat_space %>
+    </div>
   </div>
 
-  <div class="field">
-    <%= f.label :low_space %>
-    <%= f.text_field :low_space %>
+  <div id="sv_form" class="hidden_form">
+    <div class="field">
+      <%= f.label :low_space %>
+      <%= f.text_field :low_space %>
+    </div>
   </div>
+
+  <div id="plazkart_form" class="hidden_form">
+    <div class="field">
+      <%= f.label :up_space %>
+      <%= f.text_field :up_space %>
+    </div>
 
     <div class="field">
-    <%= f.label :side_up_space %>
-    <%= f.text_field :side_up_space %>
+      <%= f.label :low_space %>
+      <%= f.text_field :low_space %>
+    </div>
+
+    <div class="field">
+      <%= f.label :side_up_space %>
+      <%= f.text_field :side_up_space %>
+    </div>
+
+    <div class="field">
+      <%= f.label :side_low_space %>
+      <%= f.text_field :side_low_space %>
+    </div>
   </div>
 
-  <div class="field">
-    <%= f.label :side_low_space %>
-    <%= f.text_field :side_low_space %>
+   <div id="coupe_form" class="hidden_form">
+    <div class="field">
+      <%= f.label :up_space %>
+      <%= f.text_field :up_space %>
+    </div>
+
+    <div class="field">
+      <%= f.label :low_space %>
+      <%= f.text_field :low_space %>
+    </div>
   </div>
 
-  <div class="field">
-    <%= f.label :seat_space %>
-    <%= f.text_field :seat_space %>
-  </div>
+
+
+
+
 
   <div class="actions">
     <%= f.submit "#{car.new_record? ? 'Create' : 'Update' }" %>
   </div>
 <% end %>
+
